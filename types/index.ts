@@ -30,15 +30,6 @@ export interface MenuProps {
 export interface MagaMenuProps {
   navigation: Navigation;
 }
-
-interface MainCarouselImage {
-  name: string;
-  src: string;
-  href: string;
-}
 export interface MainCarouselProps {
-  // images: MainCarouselImage[];
-  // width: number;
-  // height: number;
   children: children;
 }

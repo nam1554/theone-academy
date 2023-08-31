@@ -22,6 +22,7 @@
     "paths": {
       "@/*": ["./*"],
       "@components/*": ["./components/*"],
+      "@constants/*": ["./constants/*"],
       "@containers/*": ["./containers/*"],
       "@hooks/*": ["./hooks/*"],
       "@libs/*": ["./libs/*"],
