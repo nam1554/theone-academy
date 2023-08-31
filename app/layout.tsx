@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import Footer from "@/containers/Footer";
 import { ThemeProvider } from "@components/material-tailwind";
-import { navigation } from "@/constants/constants";
+import { NAVIGATION } from "@/constants/constants";
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],
@@ -26,9 +26,9 @@ export default function RootLayout({
     <html lang="ko">
       <body className={notoSansKr.className}>
         <ThemeProvider>
-          <Header navigation={navigation} />
+          <Header navigation={NAVIGATION} />
           {children}
-          <Footer navigation={navigation} />
+          <Footer navigation={NAVIGATION} />
         </ThemeProvider>
       </body>
     </html>

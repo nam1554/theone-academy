@@ -1,9 +1,11 @@
 import MenuBox from "@/components/MenuBox";
 import TitleBox from "@/components/TitleBox";
-import { navigation } from "@/constants/constants";
+import { MENU_CATEGORY, NAVIGATION } from "@/constants/constants";
 
 export default function Page() {
-  const menus = navigation.filter((menu) => menu.name === "아카데미")[0].child;
+  const menus = NAVIGATION.filter(
+    (category) => category.name === MENU_CATEGORY.아카데미
+  )[0].child;
   return (
     <main>
       <section>
@@ -22,7 +24,9 @@ export default function Page() {
           </MenuBox>
         ) : null}
       </section>
-      <section>아카데미소개</section>
+      <section>
+        <div></div>
+      </section>
     </main>
   );
 }
