@@ -17,7 +17,8 @@ const Button: MenuBoxButton = ({ text, href }) => {
   return (
     <div
       className={classNames(
-        "px-10pxr py-5pxr text-14pxr hover:text-white hover:bg-theone-color1 transition duration-700",
+        "px-10pxr py-5pxr m-2pxr text-14pxr hover:text-white hover:bg-theone-color1 transition duration-700",
+        "md:text-16pxr md:px-25pxr lg:text-17pxr lg:px-40pxr",
         href === pathname
           ? "text-white bg-theone-color1"
           : "text-black bg-gray-200",

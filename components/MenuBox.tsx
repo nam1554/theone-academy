@@ -10,9 +10,7 @@ interface MenuBoxProps {
 const MenuBox = Object.assign(
   ({ children }: MenuBoxProps) => {
     return (
-      <div className="flex flex-wrap justify-center py-10pxr space-x-1">
-        {children}
-      </div>
+      <div className="flex flex-wrap justify-center py-10pxr">{children}</div>
     );
   },
   { Button }
