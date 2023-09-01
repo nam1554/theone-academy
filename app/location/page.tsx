@@ -64,7 +64,15 @@ export default function Page() {
               </div>
             </div>
             <div className="py-10pxr">
-              <div className="h-28 bg-gray-600"></div>
+              <div>
+                <iframe
+                  className="w-full h-72 md:h-[29rem]"
+                  loading="lazy"
+                  src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%ED%8F%89%ED%83%9D%EC%8B%9C%20%ED%8F%89%ED%83%9D%EB%A1%9C32%EB%B2%88%EA%B8%B8%2024&amp;t=m&amp;z=13&amp;output=embed&amp;iwloc=near"
+                  title="경기 평택시 평택로32번길 24"
+                  aria-label="경기 평택시 평택로32번길 24"
+                ></iframe>
+              </div>
             </div>
             <div className="py-5pxr flex">
               <div className="w-1/3 py-10pxr md:w-1/4 bg-theone-color1 flex justify-center items-center">
