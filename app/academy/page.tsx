@@ -93,7 +93,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="mt-10pxr py-30pxr bg-gray-100 flex flex-col justify-center">
+        <div className="mt-10pxr py-30pxr bg-gray-100 flex flex-col justify-center md:py-100pxr">
           <h2 className="text-18pxr text-center md:text-24pxr lg:text-26pxr">
             더원교육그룹&nbsp;
             <span className="font-semibold">3대 핵심가치</span>
@@ -101,45 +101,56 @@ export default function Page() {
           <div className="py-15pxr flex justify-center">
             <span className="w-1/3 border-t border-black md:h-1/6 lg:w-1/12"></span>
           </div>
-          <div className="m-10pxr px-15pxr py-35pxr flex flex-col justify-center bg-white border border-gray-300 space-y-2">
-            <div className="flex justify-center">
-              <ClipboardDocumentCheckIcon className="w-85pxr stroke-[0.7] md:w-95pxr" />
-            </div>
-            <div className="text-16pxr text-center font-bold md:text-18pxr">
-              ‘ONE’ 하다
-            </div>
-            <div className="text-13pxr text-center md:text-15pxr">
-              메뉴얼화된 수업이 아닌 고객이 원하는
-              <br />
-              맞춤형 교육을 제공을 목적으로 한다
-            </div>
-          </div>
-          <div className="m-10pxr px-15pxr py-35pxr flex flex-col justify-center bg-white border border-gray-300 space-y-2">
-            <div className="flex justify-center">
-              <UserGroupIcon className="w-85pxr stroke-[0.7] md:w-95pxr" />
-            </div>
-            <div className="text-16pxr text-center font-bold md:text-18pxr">
-              화려한 스타보단 ‘ONE’팀
-            </div>
-            <div className="text-13pxr text-center md:text-15pxr">
-              한사람에 의지한 조직이 아닌
-              <br />
-              하나의 팀으로 성과를 내는 조직을 지향한다
-            </div>
-          </div>
-          <div className="m-10pxr px-15pxr py-35pxr flex flex-col justify-center bg-white border border-gray-300 space-y-2">
-            <div className="flex justify-center">
-              <div className="relative w-85pxr h-85pxr stroke-[1] md:w-95pxr  md:h-95pxr">
-                <Image src={Handshake} fill priority alt="Logo" />
+          <div className="w-full md:flex md:justify-center md:max-w-5xl md:mx-auto lg:max-w-7xl">
+            <div
+              className="m-10pxr px-15pxr py-35pxr flex flex-col justify-center
+             bg-white border border-gray-300 space-y-2 md:w-1/3"
+            >
+              <div className="flex justify-center">
+                <ClipboardDocumentCheckIcon className="w-85pxr stroke-[0.7] md:w-95pxr" />
+              </div>
+              <div className="text-16pxr text-center font-bold md:text-18pxr">
+                ‘ONE’ 하다
+              </div>
+              <div className="text-13pxr text-center md:text-15pxr">
+                메뉴얼화된 수업이 아닌 고객이 원하는
+                <br />
+                맞춤형 교육을 제공을 목적으로 한다
               </div>
             </div>
-            <div className="text-16pxr text-center font-bold md:text-18pxr">
-              ‘ONE’ TO ONE
+            <div
+              className="m-10pxr px-15pxr py-35pxr flex flex-col justify-center
+             bg-white border border-gray-300 space-y-2 md:w-1/3"
+            >
+              <div className="flex justify-center">
+                <UserGroupIcon className="w-85pxr stroke-[0.7] md:w-95pxr" />
+              </div>
+              <div className="text-16pxr text-center font-bold md:text-18pxr">
+                화려한 스타보단 ‘ONE’팀
+              </div>
+              <div className="text-13pxr text-center md:text-15pxr">
+                한사람에 의지한 조직이 아닌
+                <br />
+                하나의 팀으로 성과를 내는 조직을 지향한다
+              </div>
             </div>
-            <div className="text-13pxr text-center md:text-15pxr">
-              직원과 고객 한분한분 만족과
-              <br />
-              발전을 도모한다
+            <div
+              className="m-10pxr px-15pxr py-35pxr flex flex-col justify-center
+             bg-white border border-gray-300 space-y-2 md:w-1/3"
+            >
+              <div className="flex justify-center">
+                <div className="relative w-85pxr h-85pxr stroke-[1] md:w-95pxr  md:h-95pxr">
+                  <Image src={Handshake} fill priority alt="Logo" />
+                </div>
+              </div>
+              <div className="text-16pxr text-center font-bold md:text-18pxr">
+                ‘ONE’ TO ONE
+              </div>
+              <div className="text-13pxr text-center md:text-15pxr">
+                직원과 고객 한분한분 만족과
+                <br />
+                발전을 도모한다
+              </div>
             </div>
           </div>
         </div>
