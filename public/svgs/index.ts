@@ -1,3 +1,4 @@
 import Logo from "./logo.svg";
+import Handshake from "./handshake.svg";
 
-export { Logo };
+export { Logo, Handshake };
