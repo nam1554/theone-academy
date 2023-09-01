@@ -1,5 +1,6 @@
 import MenuBox from "@/components/MenuBox";
 import TitleBox from "@/components/TitleBox";
+import TitleWithBar from "@/components/TitleWithBar";
 import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@/constants/constants";
 import { Handshake } from "@/public/svgs";
 import { classNames } from "@/utils/utils";
@@ -39,19 +40,7 @@ export default function Page() {
       </section>
       <section>
         <div className="max-w-7xl mx-auto">
-          <div className="p-10pxr">
-            <div className="py-15pxr">
-              <span
-                className="flex justify-center items-center w-full mx-auto
-            before:block before:border-t before:content-[''] before:border-black before:grow
-            after:block after:border-t after:content-[''] after:border-black after:grow"
-              >
-                <h1 className="text-24pxr font-medium mx-14pxr md:text-32pxr lg:text-40pxr">
-                  {MENU_NAME.아카데미소개}
-                </h1>
-              </span>
-            </div>
-          </div>
+          <TitleWithBar text={MENU_NAME.아카데미소개} />
           <div className="p-15pxr flex justify-center">
             <h2
               className={classNames(
