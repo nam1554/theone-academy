@@ -66,12 +66,13 @@ export default function Page() {
             <div className="py-10pxr">
               <div>
                 <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.7857173734883!2d127.08669897550982!3d36.99104777219338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b3afb765c1de1%3A0xbfb3e53c7b068a4!2z6rK96riw64-EIO2Pie2DneyLnCDtj4ntg53roZwzMuuyiOq4uCAyNA!5e0!3m2!1sko!2skr!4v1693554665423!5m2!1sko!2skr"
                   className="w-full h-72 md:h-[29rem]"
                   loading="lazy"
-                  src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%ED%8F%89%ED%83%9D%EC%8B%9C%20%ED%8F%89%ED%83%9D%EB%A1%9C32%EB%B2%88%EA%B8%B8%2024&amp;t=m&amp;z=13&amp;output=embed&amp;iwloc=near"
+                  referrerPolicy="no-referrer-when-downgrade"
                   title="경기 평택시 평택로32번길 24"
                   aria-label="경기 평택시 평택로32번길 24"
-                ></iframe>
+                />
               </div>
             </div>
             <div className="py-5pxr flex">
