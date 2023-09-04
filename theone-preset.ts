@@ -31,6 +31,7 @@ module.exports = {
         "theone-color7": "#fe9329",
         "theone-color8": "#ECD554",
         "theone-color9": "#C59213",
+        "theone-color10": "#F4F4DE",
       },
       backgroundColor: {
         "theone-color0": "rgb(17, 17, 17)",
@@ -43,6 +44,7 @@ module.exports = {
         "theone-color7": "#fe9329",
         "theone-color8": "#ECD554",
         "theone-color9": "#C59213",
+        "theone-color10": "#F4F4DE",
       },
       transitionProperty: {
         height: "height",
