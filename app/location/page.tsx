@@ -35,7 +35,7 @@ export default function Page() {
         ) : null}
       </section>
       <section>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto mt-20pxr md:mt-50pxr">
           <TitleWithBar text={MENU_NAME.위치조회시설소개} />
         </div>
       </section>

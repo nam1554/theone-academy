@@ -39,7 +39,7 @@ export default function Page() {
         ) : null}
       </section>
       <section>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto mt-20pxr md:mt-50pxr">
           <TitleWithBar text={MENU_NAME.아카데미소개} />
           <div className="p-15pxr flex justify-center">
             <h2
