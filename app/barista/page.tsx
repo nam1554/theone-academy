@@ -85,7 +85,7 @@ export default function Page() {
         <TitleBox
           title="BARISTA"
           subTitle="바 리 스 타"
-          backgroundImageUrl="/images/barista/barista_menu_img_0.jpeg"
+          backgroundImageUrl="/images/category/barista.jpeg"
         />
       </section>
       <section>
@@ -104,7 +104,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto mt-20pxr lg:mt-30pxr">
           <div className="relative h-28 md:h-80">
             <Image
-              src="/images/barista/barista_menu_img_1.jpeg"
+              src="/images/barista/barista_menu_img_0.jpeg"
               fill
               sizes="100vw"
               style={{
@@ -177,7 +177,7 @@ export default function Page() {
                     취미로 배우시는분들에게 추천드립니다.
                   </>
                 }
-                backgroundImageUrl="/images/barista/barista_menu_img_2.jpeg"
+                backgroundImageUrl="/images/barista/barista_menu_img_1.jpeg"
                 titleClassName="text-theone-color10"
               />
             </div>
@@ -210,7 +210,7 @@ export default function Page() {
                     커피에 대해 깊게 배워보고 싶은분들에게 추천드립니다.
                   </>
                 }
-                backgroundImageUrl="/images/barista/barista_menu_img_3.jpeg"
+                backgroundImageUrl="/images/barista/barista_menu_img_2.jpeg"
                 titleClassName="text-theone-color10"
               />
             </div>
