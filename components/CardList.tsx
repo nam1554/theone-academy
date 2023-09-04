@@ -7,7 +7,7 @@ interface CardListProps {
   children:
     | Array<ReactElement<MenuBoxButtonProps>>
     | ReactElement<MenuBoxButtonProps>;
-  columns?: 2 | 3 | 4 | "3 lg:4";
+  columns?: 2 | 3 | 4 | "3 lg:4" | "3 md:4";
 }
 
 const CardList = Object.assign(
@@ -22,7 +22,9 @@ const CardList = Object.assign(
             ? "grid-cols-3"
             : columns === 4
             ? "grid-cols-4"
-            : "grid-cols-3 lg:grid-cols-4"
+            : columns === "3 lg:4"
+            ? "grid-cols-3 lg:grid-cols-4"
+            : "grid-cols-3 md:grid-cols-4"
         )}
       >
         {children}

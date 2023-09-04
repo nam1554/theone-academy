@@ -16,7 +16,7 @@ const CardItem = ({
   content,
 }: CardItemProps) => {
   return (
-    <div className="p-5pxr">
+    <div className="p-5pxr flex flex-col">
       <div className="relative h-32 md:h-52">
         {imgUrl ? (
           <Image
@@ -33,7 +33,7 @@ const CardItem = ({
           <div className="bg-gray-600 h-full rounded-t" />
         )}
       </div>
-      <div className="relative pt-32pxr pl-5pxr pb-4pxr rounded-b bg-white h-70pxr md:h-85pxr">
+      <div className="relative pt-32pxr pl-5pxr pb-5pxr md:pl-7pxr md:pb-7pxr rounded-b bg-white grow">
         <div className="absolute top-0 left-0">
           <div
             className={classNames(

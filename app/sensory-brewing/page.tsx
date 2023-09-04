@@ -20,58 +20,73 @@ const classInfo = [
   { title: "강의시간", content: "오전반, 오후반, 저녁반, 주말반" },
 ];
 
-const 바리스타2급 = [
+const 센서리브루잉LV1 = [
   {
-    title: "커피 머신 작동법|기본적인 커피추출",
-    imgUrl: "/images/barista/barista_lv1_img_1.jpeg",
+    title: "센서리 기초이론|커피 향미 인지 훈련",
+    imgUrl: "/images/sensory-brewing/brewing_lv1_img_1.jpeg",
   },
   {
-    title: "성분추출,채널링|분쇄조절",
-    imgUrl: "/images/barista/barista_lv1_img_2.jpeg",
+    title: "아로마키트 카테고리|향미 평가훈련",
+    imgUrl: "/images/sensory-brewing/brewing_lv1_img_2.jpeg",
   },
   {
-    title: "스티밍[공기주입]|스트밍[혼합]",
-    imgUrl: "/images/barista/barista_lv1_img_3.jpeg",
+    title: "커핑 테이블 셋팅연습|아로마 키트 카테고리",
+    imgUrl: "/images/sensory-brewing/brewing_lv1_img_3.jpeg",
   },
   {
-    title: "우유 유광 제어|낙차를 활용한 푸어링",
-    imgUrl: "/images/barista/barista_lv1_img_4.jpeg",
+    title: "커핑 테이블 셋팅 실습|SCA커핑시트 작성연습",
+    imgUrl: "/images/sensory-brewing/brewing_lv1_img_4.jpeg",
   },
   {
-    title: "라떼&카푸치노 차이|원&하트 푸어링",
-    imgUrl: "/images/barista/barista_lv1_img_5.jpeg",
+    title: "브루잉 기초 이론|브루잉 방식의 차이",
+    imgUrl: "/images/sensory-brewing/brewing_lv1_img_5.jpeg",
   },
   {
-    title: "시험회차[테스트]",
-    imgUrl: "/images/barista/barista_lv1_img_6.jpeg",
+    title: "푸어방식+린싱",
+    imgUrl: "/images/sensory-brewing/brewing_lv1_img_6.jpeg",
+  },
+  {
+    title: "추출 변수 이해|구간별 커피향미",
+    imgUrl: "/images/sensory-brewing/brewing_lv1_img_7.jpeg",
+  },
+  {
+    title: "추출 변수[입자크기]|물온도",
+    imgUrl: "/images/sensory-brewing/brewing_lv1_img_8.jpeg",
   },
 ];
 
-const 바리스타1급 = [
+const 센서리브루잉LV2 = [
   {
-    title: "기초 추출복습|원두 특성파악",
-    imgUrl: "/images/barista/barista_lv2_img_1.jpeg",
+    title: "미각 5원미 이해|아로마 키트 연습",
+    imgUrl: "/images/sensory-brewing/brewing_lv2_img_1.jpeg",
   },
   {
-    title: "원두특성파악|원두양에 따른 변화",
-    imgUrl: "/images/barista/barista_lv2_img_2.jpeg",
+    title: "맛의 강도 차이|인지 연습",
+    imgUrl: "/images/sensory-brewing/brewing_lv2_img_2.jpeg",
   },
   {
-    title: "추출양에 따른 변화|분쇄도 따른 변화화",
-    imgUrl: "/images/barista/barista_lv2_img_3.jpeg",
+    title: "특성 차이 비교 실습|트라이 앵글 커핑 실습",
+    imgUrl: "/images/sensory-brewing/brewing_lv2_img_3.jpeg",
   },
   {
-    title: "라떼아트|유량제어 연습",
-    imgUrl: "/images/barista/barista_lv2_img_4.jpeg",
+    title: "커핑 테이블 셋팅 실습|커핑시 발생 오류|주의사항 이해",
+    imgUrl: "/images/sensory-brewing/brewing_lv2_img_4.jpeg",
   },
   {
-    title: "라떼아트 2단,3단하트|핸들링 연습",
-    imgUrl: "/images/barista/barista_lv2_img_5.jpeg",
+    title: "TDS+추출 수율이해|브루잉 컨트롤 차트이|해",
+    imgUrl: "/images/sensory-brewing/brewing_lv2_img_5.jpeg",
   },
-  { title: "사전테스트", imgUrl: "/images/barista/barista_lv2_img_6.jpeg" },
   {
-    title: "시험회차[테스트]",
-    imgUrl: "/images/barista/barista_lv2_img_7.jpeg",
+    title: "드리퍼+블루밍차이",
+    imgUrl: "/images/sensory-brewing/brewing_lv2_img_6.jpeg",
+  },
+  {
+    title: "추출 변수 이해|물온도,물비율 입자",
+    imgUrl: "/images/sensory-brewing/brewing_lv2_img_7.jpeg",
+  },
+  {
+    title: "추출변수 통제|TDS,추출 수율 조절",
+    imgUrl: "/images/sensory-brewing/brewing_lv2_img_8.jpeg",
   },
 ];
 
@@ -99,12 +114,12 @@ export default function Page() {
       </section>
       <section>
         <div className="max-w-7xl mx-auto mt-20pxr md:mt-50pxr">
-          <TitleWithBar text={MENU_NAME.바리스타자격증} />
+          <TitleWithBar text={MENU_NAME.센서리브루잉} />
         </div>
         <div className="max-w-7xl mx-auto md:mt-20pxr lg:mt-30pxr">
           <div className="relative h-28 md:h-80">
             <Image
-              src="/images/barista/barista_menu_img_0.jpeg"
+              src="/images/sensory-brewing/brewing_menu_img_0.jpeg"
               fill
               sizes="100vw"
               style={{
@@ -120,18 +135,22 @@ export default function Page() {
                 "font-medium text-center text-20pxr md:text-37pxr"
               )}
             >
-              “Professional Barista”
+              “Professional Sensory&Brewing”
             </div>
             <div>
               <p className="text-12pxr text-center leading-6 md:text-18pxr md:leading-10">
-                <strong>바리스타 자격증</strong> <br />
-                <strong>[활용]</strong>: 취업/창업/입시/취미까지 내 목표에
-                전문성을 더해주는 커피 수업입니다 <br />
-                <strong>[교육과정]</strong>:머신 사용 방법부터 기본 원리를
-                익힘으로 기술력 습득에 중점을 두고 있습니다
+                <strong>[센서리]</strong>커피의 맛과 향을 분별하는 스킬업을 위한
+                단맛,쓴맛,신맛,감칠맛,짠맛등 배우는 센서리수업과
                 <br />
-                <strong>[추천]</strong>: 자격증으로 능력이 증명 가능하며,
-                바리스타 현업 실무로 활용 가능합니다.
+                다양한 추출도구 활용법을 배우고 핸드드립에 대한 개념을
+                전문적으로 배우실수 있습니다
+                <br />
+                <br />
+                <strong>[브루잉]</strong> 쉽게 말해 ‘핸드드립’으로 드립포트와
+                원두, 드리퍼만 있으면 나도 핸드드립 왕!
+                <br />
+                핸드드립의 개념과 실용적인 기술력 습득으로 나만의 홈
+                카페/회사/캠핑 등 다양한 장소에서 즐겨보세요.
               </p>
             </div>
           </div>
@@ -169,25 +188,25 @@ export default function Page() {
           <div className="max-w-7xl mx-auto flex flex-col">
             <div className="md:mb-30pxr">
               <SubTitleBox
-                title="바리스타2급(LV1)"
+                title="센서리&브루잉LV1"
                 content={
                   <>
-                    바리스타를 목적으로 커피를 처음접하시거나,
+                    커피의 향과 맛을 평가하는 수업으로 홈카페 및 로스터리,브루잉
                     <br />
-                    취미로 배우시는분들에게 추천드립니다.
+                    카페 창업을 목표로 하시는분께 추천드립니다.
                   </>
                 }
-                backgroundImageUrl="/images/barista/barista_menu_img_1.jpeg"
-                titleClassName="text-theone-color10"
+                backgroundImageUrl="/images/sensory-brewing/brewing_menu_img_1.jpeg"
+                titleClassName="text-theone-color11"
               />
             </div>
-            <CardList columns={3}>
-              {바리스타2급.map((item, index) => (
+            <CardList columns={"3 md:4"}>
+              {센서리브루잉LV1.map((item, index) => (
                 <CardList.CardItem
                   key={index}
                   imgUrl={item.imgUrl}
                   labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-[#87837C]"
+                  labelBgClassName="bg-theone-color11"
                   content={item.title.split("|").map((text, textIndex) => (
                     <p key={textIndex}>{text}</p>
                   ))}
@@ -202,25 +221,24 @@ export default function Page() {
           <div className="max-w-7xl mx-auto flex flex-col">
             <div className="md:mb-30pxr">
               <SubTitleBox
-                title="바리스타1급(LV2)"
+                title="센서리&브루잉LV2"
                 content={
                   <>
-                    바리스타LV1 자격증 소지하시거나,
-                    <br />
-                    커피에 대해 깊게 배워보고 싶은분들에게 추천드립니다.
+                    스페셜티 카페 창업을 목표로 하시는분 또는
+                    <br /> 대회준비를 하시는 바리스타분
                   </>
                 }
-                backgroundImageUrl="/images/barista/barista_menu_img_2.jpeg"
-                titleClassName="text-theone-color10"
+                backgroundImageUrl="/images/sensory-brewing/brewing_menu_img_2.jpeg"
+                titleClassName="text-theone-color11"
               />
             </div>
-            <CardList columns={"3 lg:4"}>
-              {바리스타1급.map((item, index) => (
+            <CardList columns={"3 md:4"}>
+              {센서리브루잉LV2.map((item, index) => (
                 <CardList.CardItem
                   key={index}
                   imgUrl={item.imgUrl}
                   labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-[#87837C]"
+                  labelBgClassName="bg-theone-color11"
                   content={item.title.split("|").map((text, textIndex) => (
                     <p key={textIndex}>{text}</p>
                   ))}
