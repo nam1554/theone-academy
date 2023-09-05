@@ -200,7 +200,7 @@ export default function Page() {
                 titleClassName="text-theone-color11"
               />
             </div>
-            <CardList columns={"3 md:4"}>
+            <CardList columns={3} mdColumns={4}>
               {센서리브루잉LV1.map((item, index) => (
                 <CardList.CardItem
                   key={index}
@@ -232,7 +232,7 @@ export default function Page() {
                 titleClassName="text-theone-color11"
               />
             </div>
-            <CardList columns={"3 md:4"}>
+            <CardList columns={3} mdColumns={4}>
               {센서리브루잉LV2.map((item, index) => (
                 <CardList.CardItem
                   key={index}

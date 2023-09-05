@@ -7,11 +7,13 @@ interface CardListProps {
   children:
     | Array<ReactElement<MenuBoxButtonProps>>
     | ReactElement<MenuBoxButtonProps>;
-  columns?: 2 | 3 | 4 | "3 lg:4" | "3 md:4";
+  columns?: 2 | 3 | 4;
+  mdColumns?: 2 | 3 | 4;
+  lgColumns?: 2 | 3 | 4;
 }
 
 const CardList = Object.assign(
-  ({ children, columns = 3 }: CardListProps) => {
+  ({ children, columns = 3, mdColumns = 3, lgColumns = 3 }: CardListProps) => {
     return (
       <div
         className={classNames(
@@ -22,9 +24,21 @@ const CardList = Object.assign(
             ? "grid-cols-3"
             : columns === 4
             ? "grid-cols-4"
-            : columns === "3 lg:4"
-            ? "grid-cols-3 lg:grid-cols-4"
-            : "grid-cols-3 md:grid-cols-4"
+            : "",
+          mdColumns === 2
+            ? "md:grid-cols-2"
+            : mdColumns === 3
+            ? "md:grid-cols-3"
+            : mdColumns === 4
+            ? "md:grid-cols-4"
+            : "",
+          lgColumns === 2
+            ? "lg:grid-cols-2"
+            : lgColumns === 3
+            ? "lg:grid-cols-3"
+            : lgColumns === 4
+            ? "lg:grid-cols-4"
+            : ""
         )}
       >
         {children}
