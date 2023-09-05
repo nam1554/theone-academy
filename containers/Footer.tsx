@@ -28,7 +28,7 @@ const Footer = ({ navigation }: FooterProps) => {
             })}
           </div>
         </section>
-        <section className="pt-20pxr pb-50pxr border-t border-gray-900 md:px-30pxr">
+        <section className="pt-20pxr pb-100pxr border-t border-gray-900 md:px-30pxr">
           <div className="flex flex-col md:flex-row md:justify-around">
             <div className="flex items-center justify-center grow">
               <Image
@@ -53,26 +53,28 @@ const Footer = ({ navigation }: FooterProps) => {
             </div>
           </div>
         </section>
-        <section className="sticky bottom-0 lg:hidden">
-          <div className="flex justify-between text-14pxr">
-            <Link
-              className="grow bg-theone-color7 p-15pxr flex items-center"
-              href={"tel:07082872340"}
-            >
-              <div>
-                <PhoneIcon className="w-14pxr h-14pxr stroke-2 stroke-black" />
-              </div>
-              <div className="grow text-center">전화상담</div>
-            </Link>
-            <Link
-              href={"/tuition-fees"}
-              className="grow bg-theone-color8 p-15pxr flex items-center"
-            >
-              <div>
-                <ChatBubbleOvalLeftEllipsisIcon className="w-15pxr h-15pxr stroke-2 stroke-black" />
-              </div>
-              <div className="grow text-center">수강료조회</div>
-            </Link>
+        <section>
+          <div className="fixed bottom-0 w-full z-50 lg:hidden">
+            <div className="flex justify-between text-14pxr">
+              <Link
+                className="grow bg-theone-color7 p-15pxr flex items-center"
+                href={"tel:07082872340"}
+              >
+                <div>
+                  <PhoneIcon className="w-14pxr h-14pxr stroke-2 stroke-black" />
+                </div>
+                <div className="grow text-center">전화상담</div>
+              </Link>
+              <Link
+                href={"/tuition-fees"}
+                className="grow bg-theone-color8 p-15pxr flex items-center"
+              >
+                <div>
+                  <ChatBubbleOvalLeftEllipsisIcon className="w-15pxr h-15pxr stroke-2 stroke-black" />
+                </div>
+                <div className="grow text-center">수강료조회</div>
+              </Link>
+            </div>
           </div>
         </section>
       </div>
