@@ -54,7 +54,7 @@ const Footer = ({ navigation }: FooterProps) => {
           </div>
         </section>
         <section>
-          <div className="fixed bottom-0 w-full z-50 lg:hidden">
+          <div className="fixed bottom-0 w-full z-10 lg:hidden">
             <div className="flex justify-between text-14pxr">
               <Link
                 className="grow bg-theone-color7 p-15pxr flex items-center"
