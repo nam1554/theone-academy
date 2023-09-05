@@ -20,38 +20,49 @@ const 강의개요 = [
   { title: "강의시간", content: "오전반, 오후반, 저녁반, 주말반" },
 ];
 
-const 로스팅 = [
+const 라떼아트LV1 = [
   {
-    title: "로스팅의 이해|로스터기 구조 이해",
-    imgUrl: "/images/roasting/roasting_img_1.jpeg",
+    title: "스티밍과 푸어링|푸어링시 주의사항",
+    imgUrl: "/images/latte-art/latteart_lv1_img_1.jpeg",
   },
   {
-    title: "로스팅 프로파일 이해|로스팅 단계별 변화 이해",
-    imgUrl: "/images/roasting/roasting_img_2.jpeg",
+    title: "기본적인 푸어링 연습|물과 우유로 유량제어 연습",
+    imgUrl: "/images/latte-art/latteart_lv1_img_2.jpeg",
   },
   {
-    title: "로스팅 시간의 이해|시간에 따른 차이 이해",
-    imgUrl: "/images/roasting/roasting_img_3.jpeg",
+    title: "면 하트[1단 하트]|원 띄우기 복습",
+    imgUrl: "/images/latte-art/latteart_lv1_img_3.jpeg",
   },
   {
-    title: "로스팅 포인트의 이해|로스팅 포인트 따른|차이 이해(화력변화x)",
-    imgUrl: "/images/roasting/roasting_img_4.jpeg",
+    title: "2, 3단 하트&핸들링|면하트 복습",
+    imgUrl: "/images/latte-art/latteart_lv1_img_4.jpeg",
   },
   {
-    title: "화역, 댐퍼 이해|화력조절 및 댐퍼조절 변화 이해",
-    imgUrl: "/images/roasting/roasting_img_5.jpeg",
+    title: "기본패턴 복습|패턴들의 주의사항 이해도 확인",
+    imgUrl: "/images/latte-art/latteart_lv1_img_5.jpeg",
+  },
+];
+
+const 라떼아트LV2 = [
+  {
+    title: "크레마와 우유폼의 이해|우유 스티밍 복습",
+    imgUrl: "/images/latte-art/latteart_lv2_img_1.jpeg",
   },
   {
-    title: "화력, 댐퍼 변화율|이용한 프로파일 작성 및 활용",
-    imgUrl: "/images/roasting/roasting_img_6.jpeg",
+    title: "기본 패턴 복습|면하트, 2단 하트, 3단 하트, 핸들링",
+    imgUrl: "/images/latte-art/latteart_lv2_img_2.jpeg",
   },
   {
-    title: "DTR과 디펙트의 이해",
-    imgUrl: "/images/roasting/roasting_img_7.jpeg",
+    title: "결하트 및 결튤립|핸들링 교정, 결하트, 결튤립",
+    imgUrl: "/images/latte-art/latteart_lv2_img_3.jpeg",
   },
   {
-    title: "디펙트의 이해|베이크드, 스코칭, 티핑",
-    imgUrl: "/images/roasting/roasting_img_8.jpeg",
+    title: "로제타 패턴 연습|유량, 낙차 제어 연습",
+    imgUrl: "/images/latte-art/latteart_lv2_img_4.jpeg",
+  },
+  {
+    title: "패턴복습|핸들링 패턴 및 기본 면 패턴복습",
+    imgUrl: "/images/latte-art/latteart_lv2_img_5.jpeg",
   },
 ];
 
@@ -79,12 +90,12 @@ export default function Page() {
       </section>
       <section>
         <div className="max-w-7xl mx-auto mt-20pxr md:mt-50pxr">
-          <TitleWithBar text={MENU_NAME.로스팅} />
+          <TitleWithBar text={MENU_NAME.라떼아트} />
         </div>
         <div className="max-w-7xl mx-auto md:mt-20pxr lg:mt-30pxr">
           <div className="relative h-28 md:h-80">
             <Image
-              src="/images/roasting/roasting_menu_img_0.jpeg"
+              src="/images/latte-art/latteart_menu_img_0.jpeg"
               fill
               sizes="100vw"
               style={{
@@ -100,17 +111,14 @@ export default function Page() {
                 "font-medium text-center text-20pxr md:text-37pxr"
               )}
             >
-              “Professional Roasting”
+              “Professional Latte Art”
             </div>
             <div>
               <p className="text-12pxr text-center leading-6 md:text-18pxr md:leading-10">
-                <strong>[로스팅]</strong>커피콩 성분 파악과 &quot;콩
-                볶기&quot;로, 향을 만드는 과정입니다! 원두의 향미를 만들고
-                살리는 과정이며 저가/중가/고가의 원두를 섞고 볶아서 사용하며
-                직접 커피 맛을 내면서 차별화를 둘 수 있습니다.
+                요즘은 디자인 시대!
                 <br />
-                ∙추천: 카페 창업주분/R&D 연구소 예비 취업 준비하시는 분/유통
-                판매업 준비하시는분들
+                다양한 패턴과 핸들링을 숙지하여, 2단 하트, 3단 하트, 로제타,
+                스완 등 커피 위에 작품 만드는걸 배워보실 수 있습니다.
               </p>
             </div>
           </div>
@@ -148,25 +156,57 @@ export default function Page() {
           <div className="max-w-7xl mx-auto flex flex-col">
             <div className="md:mb-30pxr">
               <SubTitleBox
-                title="로스팅"
+                title="라떼아트LV1"
                 content={
                   <>
-                    로스터리 카페 창업 목표로 하시거나,
+                    기초적인 그림을 그리는 방법 이해 또는
                     <br />
-                    유통 판매업쪽으로 고민하시는분
+                    면하트, 2단 하트, 3단 하트와 핸들링
                   </>
                 }
-                backgroundImageUrl="/images/roasting/roasting_menu_img_1.jpeg"
-                titleClassName="text-theone-color12"
+                backgroundImageUrl="/images/latte-art/latteart_menu_img_1.jpeg"
+                titleClassName="text-theone-color13"
               />
             </div>
-            <CardList columns={3} mdColumns={4}>
-              {로스팅.map((item, index) => (
+            <CardList columns={3}>
+              {라떼아트LV1.map((item, index) => (
                 <CardList.CardItem
                   key={index}
                   imgUrl={item.imgUrl}
                   labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color12"
+                  labelBgClassName="bg-theone-color13"
+                  content={item.title.split("|").map((text, textIndex) => (
+                    <p key={textIndex}>{text}</p>
+                  ))}
+                />
+              ))}
+            </CardList>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="bg-gray-100 py-30pxr md:py-100pxr">
+          <div className="max-w-7xl mx-auto flex flex-col">
+            <div className="md:mb-30pxr">
+              <SubTitleBox
+                title="라떼아트LV2"
+                content={
+                  <>
+                    심화적인 그림을 그리는 수업
+                    <br /> 결하트, 결튤립, 로제타
+                  </>
+                }
+                backgroundImageUrl="/images/latte-art/latteart_menu_img_2.jpeg"
+                titleClassName="text-theone-color13"
+              />
+            </div>
+            <CardList columns={3}>
+              {라떼아트LV2.map((item, index) => (
+                <CardList.CardItem
+                  key={index}
+                  imgUrl={item.imgUrl}
+                  labelText={index + 1 + "회차"}
+                  labelBgClassName="bg-theone-color13"
                   content={item.title.split("|").map((text, textIndex) => (
                     <p key={textIndex}>{text}</p>
                   ))}

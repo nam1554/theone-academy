@@ -13,7 +13,7 @@ const montserrat = Montserrat({
   weight: ["100", "300", "400", "500", "700", "900"],
 });
 
-const classInfo = [
+const 강의개요 = [
   { title: "정원", content: "2~6명" },
   { title: "교육기간", content: "1~3개월" },
   { title: "시간표", content: "주2회, 주3회, 주말반 수업" },
@@ -146,7 +146,7 @@ export default function Page() {
               </h2>
             </div>
             <div className="divide-y divide-gray-300 border-y border-gray-300">
-              {classInfo.map((item, index) => (
+              {강의개요.map((item, index) => (
                 <div key={index} className="flex">
                   <div className="p-10pxr w-[30%] bg-gray-100 flex justify-center">
                     <span className="text-15pxr md:text-17pxr">
