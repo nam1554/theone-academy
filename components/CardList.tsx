@@ -13,7 +13,7 @@ interface CardListProps {
 }
 
 const CardList = Object.assign(
-  ({ children, columns = 3, mdColumns = 3, lgColumns = 3 }: CardListProps) => {
+  ({ children, columns = 3, mdColumns, lgColumns }: CardListProps) => {
     return (
       <div
         className={classNames(
