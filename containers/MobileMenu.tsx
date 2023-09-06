@@ -6,9 +6,11 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Fragment } from "react";
 
 const MobileMenu = ({ navigation }: MobileMenuProps) => {
+  const pathname = usePathname();
   return (
     <Menu>
       <Menu.Button className="pr-2">
@@ -41,8 +43,13 @@ const MobileMenu = ({ navigation }: MobileMenuProps) => {
               {navigation.map((menu, menuIndex) => {
                 return (
                   <Menu.Item key={menuIndex} disabled>
-                    {({ active, close }) => (
-                      <Disclosure as="div">
+                    {({ active: menuActive, close: menuClose }) => (
+                      <Disclosure
+                        as="div"
+                        defaultOpen={menu.child?.some(
+                          (item) => item.href === pathname
+                        )}
+                      >
                         {({ open }) => (
                           <>
                             <Disclosure.Button
@@ -67,8 +74,13 @@ const MobileMenu = ({ navigation }: MobileMenuProps) => {
                                   <div className="flex">
                                     <Link
                                       href={item.href}
-                                      onClick={close}
-                                      className="py-2 pl-7 text-sm leading-7 text-white w-full"
+                                      onClick={menuClose}
+                                      className={classNames(
+                                        "py-2 pl-7 text-sm leading-7 text-white w-full",
+                                        item.href === pathname
+                                          ? "bg-theone-color5"
+                                          : ""
+                                      )}
                                     >
                                       {item.name}
                                     </Link>
