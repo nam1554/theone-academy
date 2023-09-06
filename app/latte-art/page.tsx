@@ -152,7 +152,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="bg-gray-100 py-30pxr md:py-100pxr">
+        <div className="bg-gray-100 bg-opacity-80 py-30pxr md:py-100pxr">
           <div className="max-w-7xl mx-auto flex flex-col">
             <div className="md:mb-30pxr">
               <SubTitleBox
@@ -165,7 +165,7 @@ export default function Page() {
                   </>
                 }
                 backgroundImageUrl="/images/latte-art/latteart_menu_img_1.jpeg"
-                titleClassName="text-theone-color13"
+                titleClassName="text-theone-color12"
               />
             </div>
             <CardList columns={3}>
@@ -174,7 +174,7 @@ export default function Page() {
                   key={index}
                   imgUrl={item.imgUrl}
                   labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color13"
+                  labelBgClassName="bg-theone-color12"
                   content={item.title.split("|").map((text, textIndex) => (
                     <p key={textIndex}>{text}</p>
                   ))}
@@ -185,7 +185,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="bg-gray-100 py-30pxr md:py-100pxr">
+        <div className="py-30pxr md:py-100pxr">
           <div className="max-w-7xl mx-auto flex flex-col">
             <div className="md:mb-30pxr">
               <SubTitleBox
@@ -197,7 +197,7 @@ export default function Page() {
                   </>
                 }
                 backgroundImageUrl="/images/latte-art/latteart_menu_img_2.jpeg"
-                titleClassName="text-theone-color13"
+                titleClassName="text-theone-color12"
               />
             </div>
             <CardList columns={3}>
@@ -206,7 +206,7 @@ export default function Page() {
                   key={index}
                   imgUrl={item.imgUrl}
                   labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color13"
+                  labelBgClassName="bg-theone-color12"
                   content={item.title.split("|").map((text, textIndex) => (
                     <p key={textIndex}>{text}</p>
                   ))}

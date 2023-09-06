@@ -144,7 +144,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="bg-gray-100 py-30pxr md:py-100pxr">
+        <div className="bg-gray-100 bg-opacity-80 py-30pxr md:py-100pxr">
           <div className="max-w-7xl mx-auto flex flex-col">
             <div className="md:mb-30pxr">
               <SubTitleBox
@@ -157,7 +157,7 @@ export default function Page() {
                   </>
                 }
                 backgroundImageUrl="/images/roasting/roasting_menu_img_1.jpeg"
-                titleClassName="text-theone-color12"
+                titleClassName="text-theone-color11"
               />
             </div>
             <CardList columns={3} mdColumns={4}>
@@ -166,7 +166,7 @@ export default function Page() {
                   key={index}
                   imgUrl={item.imgUrl}
                   labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color12"
+                  labelBgClassName="bg-theone-color11"
                   content={item.title.split("|").map((text, textIndex) => (
                     <p key={textIndex}>{text}</p>
                   ))}

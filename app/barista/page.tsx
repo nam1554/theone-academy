@@ -165,7 +165,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="bg-gray-100 py-30pxr md:py-100pxr">
+        <div className="bg-gray-100 bg-opacity-80 py-30pxr md:py-100pxr">
           <div className="max-w-7xl mx-auto flex flex-col">
             <div className="md:mb-30pxr">
               <SubTitleBox
@@ -198,7 +198,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="bg-gray-100 py-30pxr md:py-100pxr">
+        <div className="py-30pxr md:py-100pxr">
           <div className="max-w-7xl mx-auto flex flex-col">
             <div className="md:mb-30pxr">
               <SubTitleBox

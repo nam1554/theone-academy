@@ -1,11 +1,9 @@
-import CardList from "@/components/CardList";
 import MenuBox from "@/components/MenuBox";
-import SubTitleBox from "@/components/SubTitleBox";
+import TextWithCheckIcon from "@/components/TextWithCheckIcon";
 import TitleBox from "@/components/TitleBox";
 import TitleWithBar from "@/components/TitleWithBar";
 import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@/constants/constants";
 import { classNames } from "@/utils/utils";
-import { CheckIcon } from "@heroicons/react/24/outline";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 
@@ -20,17 +18,6 @@ const 강의개요 = [
   { title: "시간표", content: "주2회, 주3회, 주말반 수업" },
   { title: "강의시간", content: "오전반, 오후반, 저녁반, 주말반" },
 ];
-
-const TextWithCheckIcon = ({ text }: { text: string }) => (
-  <div className="flex items-center space-x-2">
-    <span className="flex items-center justify-center bg-theone-color5 rounded-sm w-12pxr h-12pxr md:w-14pxr md:h-14pxr">
-      <CheckIcon className="w-12pxr stroke-white stroke-[2]" />
-    </span>
-    <span className="flex items-center text-12pxr md:text-14pxr lg:text-17pxr">
-      {text}
-    </span>
-  </div>
-);
 
 export default function Page() {
   const menus = NAVIGATION.filter(
