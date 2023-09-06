@@ -41,7 +41,7 @@ const MobileMenu = ({ navigation }: MobileMenuProps) => {
               {navigation.map((menu, menuIndex) => {
                 return (
                   <Menu.Item key={menuIndex} disabled>
-                    {({ active }) => (
+                    {({ active, close }) => (
                       <Disclosure as="div">
                         {({ open }) => (
                           <>
@@ -62,10 +62,17 @@ const MobileMenu = ({ navigation }: MobileMenuProps) => {
                               {menu.child?.map((item, childMenuIndex) => (
                                 <Disclosure.Button
                                   key={childMenuIndex}
-                                  as="div"
-                                  className="py-2 pl-7 text-sm leading-7 text-white"
+                                  as={Fragment}
                                 >
-                                  <Link href={item.href}>{item.name}</Link>
+                                  <div className="flex">
+                                    <Link
+                                      href={item.href}
+                                      onClick={close}
+                                      className="py-2 pl-7 text-sm leading-7 text-white w-full"
+                                    >
+                                      {item.name}
+                                    </Link>
+                                  </div>
                                 </Disclosure.Button>
                               ))}
                             </Disclosure.Panel>
