@@ -1,7 +1,8 @@
-import CardList from "@components/CardList";
 import SubTitleBox from "@components/SubTitleBox";
 import TitleWithBar from "@components/TitleWithBar";
 import { MENU_NAME } from "@constants/constants";
+import BaristaLv1 from "@containers/barista/BaristaLv1";
+import BaristaLv2 from "@containers/barista/BaristaLv2";
 import { classNames } from "@utils/utils";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
@@ -16,61 +17,6 @@ const 강의개요 = [
   { title: "교육기간", content: "1~3개월" },
   { title: "시간표", content: "주2회, 주3회, 주말반 수업" },
   { title: "강의시간", content: "오전반, 오후반, 저녁반, 주말반" },
-];
-
-const 바리스타2급 = [
-  {
-    title: "커피 머신 작동법|기본적인 커피추출",
-    imgUrl: "/images/barista/barista_lv1_img_1.jpeg",
-  },
-  {
-    title: "성분추출,채널링|분쇄조절",
-    imgUrl: "/images/barista/barista_lv1_img_2.jpeg",
-  },
-  {
-    title: "스티밍[공기주입]|스트밍[혼합]",
-    imgUrl: "/images/barista/barista_lv1_img_3.jpeg",
-  },
-  {
-    title: "우유 유광 제어|낙차를 활용한 푸어링",
-    imgUrl: "/images/barista/barista_lv1_img_4.jpeg",
-  },
-  {
-    title: "라떼&카푸치노 차이|원&하트 푸어링",
-    imgUrl: "/images/barista/barista_lv1_img_5.jpeg",
-  },
-  {
-    title: "시험회차[테스트]",
-    imgUrl: "/images/barista/barista_lv1_img_6.jpeg",
-  },
-];
-
-const 바리스타1급 = [
-  {
-    title: "기초 추출복습|원두 특성파악",
-    imgUrl: "/images/barista/barista_lv2_img_1.jpeg",
-  },
-  {
-    title: "원두특성파악|원두양에 따른 변화",
-    imgUrl: "/images/barista/barista_lv2_img_2.jpeg",
-  },
-  {
-    title: "추출양에 따른 변화|분쇄도 따른 변화화",
-    imgUrl: "/images/barista/barista_lv2_img_3.jpeg",
-  },
-  {
-    title: "라떼아트|유량제어 연습",
-    imgUrl: "/images/barista/barista_lv2_img_4.jpeg",
-  },
-  {
-    title: "라떼아트 2단,3단하트|핸들링 연습",
-    imgUrl: "/images/barista/barista_lv2_img_5.jpeg",
-  },
-  { title: "사전테스트", imgUrl: "/images/barista/barista_lv2_img_6.jpeg" },
-  {
-    title: "시험회차[테스트]",
-    imgUrl: "/images/barista/barista_lv2_img_7.jpeg",
-  },
 ];
 
 export default function Page() {
@@ -160,19 +106,7 @@ export default function Page() {
                 titleClassName="text-theone-color10"
               />
             </div>
-            <CardList columns={3}>
-              {바리스타2급.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-[#87837C]"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex}>{text}</p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <BaristaLv1 />
           </div>
         </div>
       </section>
@@ -193,19 +127,7 @@ export default function Page() {
                 titleClassName="text-theone-color10"
               />
             </div>
-            <CardList columns={3} lgColumns={4}>
-              {바리스타1급.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-[#87837C]"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex}>{text}</p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <BaristaLv2 />
           </div>
         </div>
       </section>

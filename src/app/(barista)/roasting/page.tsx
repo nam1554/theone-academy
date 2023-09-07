@@ -1,7 +1,7 @@
-import CardList from "@components/CardList";
 import SubTitleBox from "@components/SubTitleBox";
 import TitleWithBar from "@components/TitleWithBar";
 import { MENU_NAME } from "@constants/constants";
+import Roasting from "@containers/roasting/Roasting";
 import { classNames } from "@utils/utils";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
@@ -16,41 +16,6 @@ const 강의개요 = [
   { title: "교육기간", content: "1~3개월" },
   { title: "시간표", content: "주2회, 주3회, 주말반 수업" },
   { title: "강의시간", content: "오전반, 오후반, 저녁반, 주말반" },
-];
-
-const 로스팅 = [
-  {
-    title: "로스팅의 이해|로스터기 구조 이해",
-    imgUrl: "/images/roasting/roasting_img_1.jpeg",
-  },
-  {
-    title: "로스팅 프로파일 이해|로스팅 단계별 변화 이해",
-    imgUrl: "/images/roasting/roasting_img_2.jpeg",
-  },
-  {
-    title: "로스팅 시간의 이해|시간에 따른 차이 이해",
-    imgUrl: "/images/roasting/roasting_img_3.jpeg",
-  },
-  {
-    title: "로스팅 포인트의 이해|로스팅 포인트 따른|차이 이해(화력변화x)",
-    imgUrl: "/images/roasting/roasting_img_4.jpeg",
-  },
-  {
-    title: "화역, 댐퍼 이해|화력조절 및 댐퍼조절 변화 이해",
-    imgUrl: "/images/roasting/roasting_img_5.jpeg",
-  },
-  {
-    title: "화력, 댐퍼 변화율|이용한 프로파일 작성 및 활용",
-    imgUrl: "/images/roasting/roasting_img_6.jpeg",
-  },
-  {
-    title: "DTR과 디펙트의 이해",
-    imgUrl: "/images/roasting/roasting_img_7.jpeg",
-  },
-  {
-    title: "디펙트의 이해|베이크드, 스코칭, 티핑",
-    imgUrl: "/images/roasting/roasting_img_8.jpeg",
-  },
 ];
 
 export default function Page() {
@@ -139,19 +104,7 @@ export default function Page() {
                 titleClassName="text-theone-color11"
               />
             </div>
-            <CardList columns={3} mdColumns={4}>
-              {로스팅.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color11"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex}>{text}</p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <Roasting />
           </div>
         </div>
       </section>

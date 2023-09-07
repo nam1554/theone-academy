@@ -1,19 +1,23 @@
-import { ReactElement } from "react";
-import { MenuBoxButtonProps } from "./MenuBoxButton";
-import CardItem from "./CardItem";
+import { Children, ReactElement, cloneElement } from "react";
+import CardItem, { CardItemProps } from "./CardItem";
 import { classNames } from "@utils/utils";
 
 interface CardListProps {
-  children:
-    | Array<ReactElement<MenuBoxButtonProps>>
-    | ReactElement<MenuBoxButtonProps>;
+  children: Array<ReactElement<CardItemProps>> | ReactElement<CardItemProps>;
   columns?: 2 | 3 | 4;
   mdColumns?: 2 | 3 | 4;
   lgColumns?: 2 | 3 | 4;
+  labelBgClassName?: string;
 }
 
 const CardList = Object.assign(
-  ({ children, columns = 3, mdColumns, lgColumns }: CardListProps) => {
+  ({
+    children,
+    columns = 3,
+    mdColumns,
+    lgColumns,
+    labelBgClassName,
+  }: CardListProps) => {
     return (
       <div
         className={classNames(
@@ -41,7 +45,13 @@ const CardList = Object.assign(
             : ""
         )}
       >
-        {children}
+        {Children.map(children, (child, index) =>
+          cloneElement(child, {
+            ...child.props,
+            labelText: child.props.labelText || `${index + 1}회차`,
+            labelBgClassName: child.props.labelBgClassName || labelBgClassName,
+          })
+        )}
       </div>
     );
   },

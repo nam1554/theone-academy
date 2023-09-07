@@ -1,7 +1,8 @@
-import CardList from "@components/CardList";
 import SubTitleBox from "@components/SubTitleBox";
 import TitleWithBar from "@components/TitleWithBar";
 import { MENU_NAME } from "@constants/constants";
+import LatteartLv1 from "@containers/latte-art/LatteartLv1";
+import LatteartLv2 from "@containers/latte-art/LatteartLv2";
 import { classNames } from "@utils/utils";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
@@ -16,52 +17,6 @@ const 강의개요 = [
   { title: "교육기간", content: "1~3개월" },
   { title: "시간표", content: "주2회, 주3회, 주말반 수업" },
   { title: "강의시간", content: "오전반, 오후반, 저녁반, 주말반" },
-];
-
-const 라떼아트LV1 = [
-  {
-    title: "스티밍과 푸어링|푸어링시 주의사항",
-    imgUrl: "/images/latte-art/latteart_lv1_img_1.jpeg",
-  },
-  {
-    title: "기본적인 푸어링 연습|물과 우유로 유량제어 연습",
-    imgUrl: "/images/latte-art/latteart_lv1_img_2.jpeg",
-  },
-  {
-    title: "면 하트[1단 하트]|원 띄우기 복습",
-    imgUrl: "/images/latte-art/latteart_lv1_img_3.jpeg",
-  },
-  {
-    title: "2, 3단 하트&핸들링|면하트 복습",
-    imgUrl: "/images/latte-art/latteart_lv1_img_4.jpeg",
-  },
-  {
-    title: "기본패턴 복습|패턴들의 주의사항 이해도 확인",
-    imgUrl: "/images/latte-art/latteart_lv1_img_5.jpeg",
-  },
-];
-
-const 라떼아트LV2 = [
-  {
-    title: "크레마와 우유폼의 이해|우유 스티밍 복습",
-    imgUrl: "/images/latte-art/latteart_lv2_img_1.jpeg",
-  },
-  {
-    title: "기본 패턴 복습|면하트, 2단 하트, 3단 하트, 핸들링",
-    imgUrl: "/images/latte-art/latteart_lv2_img_2.jpeg",
-  },
-  {
-    title: "결하트 및 결튤립|핸들링 교정, 결하트, 결튤립",
-    imgUrl: "/images/latte-art/latteart_lv2_img_3.jpeg",
-  },
-  {
-    title: "로제타 패턴 연습|유량, 낙차 제어 연습",
-    imgUrl: "/images/latte-art/latteart_lv2_img_4.jpeg",
-  },
-  {
-    title: "패턴복습|핸들링 패턴 및 기본 면 패턴복습",
-    imgUrl: "/images/latte-art/latteart_lv2_img_5.jpeg",
-  },
 ];
 
 export default function Page() {
@@ -147,19 +102,7 @@ export default function Page() {
                 titleClassName="text-theone-color12"
               />
             </div>
-            <CardList columns={3}>
-              {라떼아트LV1.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color12"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex}>{text}</p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <LatteartLv1 />
           </div>
         </div>
       </section>
@@ -179,19 +122,7 @@ export default function Page() {
                 titleClassName="text-theone-color12"
               />
             </div>
-            <CardList columns={3}>
-              {라떼아트LV2.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color12"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex}>{text}</p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <LatteartLv2 />
           </div>
         </div>
       </section>

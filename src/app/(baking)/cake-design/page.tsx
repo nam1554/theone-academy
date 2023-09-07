@@ -1,8 +1,10 @@
-import CardList from "@components/CardList";
 import SubTitleBox from "@components/SubTitleBox";
 import TextWithCheckIcon from "@components/TextWithCheckIcon";
 import TitleWithBar from "@components/TitleWithBar";
 import { MENU_NAME } from "@constants/constants";
+import CakeDesignDeepening from "@containers/cake-design/CakeDesignDeepening";
+import CakeDesignIntroduction from "@containers/cake-design/CakeDesignIntroduction";
+import CakeDesignWorkinglevel from "@containers/cake-design/CakeDesignWorkinglevel";
 import { classNames } from "@utils/utils";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
@@ -17,103 +19,6 @@ const 강의개요 = [
   { title: "교육기간", content: "1~2개월" },
   { title: "시간표", content: "주2회, 주3회, 주말반 수업" },
   { title: "강의시간", content: "오전반, 오후반, 저녁반, 주말반" },
-];
-
-const 케이크디자인입문 = [
-  {
-    title: "케이크 아이싱 종류(원형)",
-    imgUrl: "/images/cake-design/cakedesign_introduction_img_1.jpeg",
-  },
-  {
-    title: "케이크 아이싱 종류(돔형)|기초 파이핑",
-    imgUrl: "/images/cake-design/cakedesign_introduction_img_2.jpeg",
-  },
-  {
-    title: "제누아즈 제조 이해 및 각종 깍지를 이용한 파이핑 연습",
-    imgUrl: "/images/cake-design/cakedesign_introduction_img_3.jpeg",
-  },
-  {
-    title: "도안 및 실전 케이크 제작",
-    imgUrl: "/images/cake-design/cakedesign_introduction_img_4.jpeg",
-  },
-  {
-    title: "레터링, 실전 파이핑 응용법",
-    imgUrl: "/images/cake-design/cakedesign_introduction_img_5.jpeg",
-  },
-  {
-    title: "레이스 파이핑 응용,|커스텀 케이크 시트제작",
-    imgUrl: "/images/cake-design/cakedesign_introduction_img_6.jpeg",
-  },
-  {
-    title: "다양한 크림 제조법 이해,|도안 파이핑",
-    imgUrl: "/images/cake-design/cakedesign_introduction_img_7.jpeg",
-  },
-  {
-    title: "나만의 커스텀 케이크 제작",
-    imgUrl: "/images/cake-design/cakedesign_introduction_img_8.jpeg",
-  },
-];
-
-const 케이크디자인심화 = [
-  {
-    title: "케이크 아이싱 종류(쉬폰)",
-    imgUrl: "/images/cake-design/cakedesign_deepening_img_1.jpeg",
-  },
-  {
-    title: "아이싱 응용법(사각) 및 시트제작",
-    imgUrl: "/images/cake-design/cakedesign_deepening_img_2.jpeg",
-  },
-  {
-    title: "쉬폰케이크 디자인 및 디자인 실전 연습",
-    imgUrl: "/images/cake-design/cakedesign_deepening_img_3.jpeg",
-  },
-  {
-    title: "플라워 파이핑(장미,작약) 및 조색 방법 이해 제조",
-    imgUrl: "/images/cake-design/cakedesign_deepening_img_4.jpeg",
-  },
-  {
-    title: "플라워 파이핑(여러가지 꽃) 및 조색 실습(그라데이션)",
-    imgUrl: "/images/cake-design/cakedesign_deepening_img_5.jpeg",
-  },
-  {
-    title: "플라워 파이핑 실습 시트제작",
-    imgUrl: "/images/cake-design/cakedesign_deepening_img_6.jpeg",
-  },
-  {
-    title: "다양한 크림 제조 및 컬러나 디자인에 따른 꽃 배치 연습",
-    imgUrl: "/images/cake-design/cakedesign_deepening_img_7.jpeg",
-  },
-  {
-    title: "나만의 플라워 케이크 제작",
-    imgUrl: "/images/cake-design/cakedesign_deepening_img_8.jpeg",
-  },
-];
-
-const 케이크실무 = [
-  {
-    title: "빅토리아 케이크",
-    imgUrl: "/images/cake-design/cakedesign_workinglevel_img_1.jpeg",
-  },
-  {
-    title: "바스크 치즈 케이크",
-    imgUrl: "/images/cake-design/cakedesign_workinglevel_img_2.jpeg",
-  },
-  {
-    title: "마스카포네 티라미슈",
-    imgUrl: "/images/cake-design/cakedesign_workinglevel_img_3.jpeg",
-  },
-  {
-    title: "요거트 보틀케이크",
-    imgUrl: "/images/cake-design/cakedesign_workinglevel_img_4.jpeg",
-  },
-  {
-    title: "제철과일 샤를로트",
-    imgUrl: "/images/cake-design/cakedesign_workinglevel_img_5.jpeg",
-  },
-  {
-    title: "체리 포레누아",
-    imgUrl: "/images/cake-design/cakedesign_workinglevel_img_6.jpeg",
-  },
 ];
 
 export default function Page() {
@@ -235,21 +140,7 @@ export default function Page() {
                 titleClassName="text-theone-color13"
               />
             </div>
-            <CardList columns={3} mdColumns={4}>
-              {케이크디자인입문.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color13"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex} className="lg:w-2/3">
-                      {text}
-                    </p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <CakeDesignIntroduction />
           </div>
         </div>
       </section>
@@ -270,21 +161,7 @@ export default function Page() {
                 titleClassName="text-theone-color13"
               />
             </div>
-            <CardList columns={3} mdColumns={4}>
-              {케이크디자인심화.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color13"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex} className="lg:w-2/3">
-                      {text}
-                    </p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <CakeDesignDeepening />
           </div>
         </div>
       </section>
@@ -305,21 +182,7 @@ export default function Page() {
                 titleClassName="text-theone-color13"
               />
             </div>
-            <CardList columns={3}>
-              {케이크실무.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color13"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex} className="lg:w-2/3">
-                      {text}
-                    </p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <CakeDesignWorkinglevel />
           </div>
         </div>
       </section>

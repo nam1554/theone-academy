@@ -1,8 +1,9 @@
-import CardList from "@components/CardList";
 import SubTitleBox from "@components/SubTitleBox";
 import TextWithCheckIcon from "@components/TextWithCheckIcon";
 import TitleWithBar from "@components/TitleWithBar";
 import { MENU_NAME } from "@constants/constants";
+import DessertDeepening from "@containers/dessert/DessertDeepening";
+import DessertIntroduction from "@containers/dessert/DessertIntroduction";
 import { classNames } from "@utils/utils";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
@@ -17,76 +18,6 @@ const 강의개요 = [
   { title: "교육기간", content: "1~3개월" },
   { title: "시간표", content: "주2회, 주3회, 주말반 수업" },
   { title: "강의시간", content: "오전반, 오후반, 저녁반, 주말반" },
-];
-
-const 카페디저트입문 = [
-  {
-    title: "아메리칸쿠키(2종)|클래식/너티초콜릿",
-    imgUrl: "/images/dessert/dessert_introduction_img_1.jpg",
-  },
-  {
-    title: "갈레트오쇼콜라",
-    imgUrl: "/images/dessert/dessert_introduction_img_2.jpg",
-  },
-  {
-    title: "마들렌2종|(커스터드, 레밍턴)",
-    imgUrl: "/images/dessert/dessert_introduction_img_3.jpg",
-  },
-  {
-    title: "휘낭시에(2종)|무화과크림/치즈누네띠네",
-    imgUrl: "/images/dessert/dessert_introduction_img_4.jpg",
-  },
-  {
-    title: "얼그레이스콘",
-    imgUrl: "/images/dessert/dessert_introduction_img_5.jpg",
-  },
-  {
-    title: "티라미수컵케이크",
-    imgUrl: "/images/dessert/dessert_introduction_img_6.jpg",
-  },
-  {
-    title: "솔티카라멜 파운드",
-    imgUrl: "/images/dessert/dessert_introduction_img_7.jpeg",
-  },
-  {
-    title: "블루베리 치즈|크럼블",
-    imgUrl: "/images/dessert/dessert_introduction_img_8.jpeg",
-  },
-];
-
-const 카페디저트심화 = [
-  {
-    title: "레몬 구겔호프",
-    imgUrl: "/images/dessert/dessert_deepening_img_1.jpg",
-  },
-  {
-    title: "메이플 피칸파이",
-    imgUrl: "/images/dessert/dessert_deepening_img_2.jpg",
-  },
-  {
-    title: "에그타르트",
-    imgUrl: "/images/dessert/dessert_deepening_img_3.jpg",
-  },
-  {
-    title: "얼그레이 갸토 쇼콜라",
-    imgUrl: "/images/dessert/dessert_deepening_img_4.jpg",
-  },
-  {
-    title: "넛츠 가나슈 타르트",
-    imgUrl: "/images/dessert/dessert_deepening_img_5.jpg",
-  },
-  {
-    title: "당근케이크",
-    imgUrl: "/images/dessert/dessert_deepening_img_6.jpg",
-  },
-  {
-    title: "비스퀴 과일 롤",
-    imgUrl: "/images/dessert/dessert_deepening_img_7.jpg",
-  },
-  {
-    title: "다쿠아즈 몽블랑",
-    imgUrl: "/images/dessert/dessert_deepening_img_8.jpg",
-  },
 ];
 
 export default function Page() {
@@ -204,19 +135,7 @@ export default function Page() {
                 titleClassName="text-theone-color9"
               />
             </div>
-            <CardList columns={3} mdColumns={4}>
-              {카페디저트입문.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color9"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex}>{text}</p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <DessertIntroduction />
           </div>
         </div>
       </section>
@@ -237,19 +156,7 @@ export default function Page() {
                 titleClassName="text-theone-color9"
               />
             </div>
-            <CardList columns={3} mdColumns={4}>
-              {카페디저트심화.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color9"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex}>{text}</p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <DessertDeepening />
           </div>
         </div>
       </section>

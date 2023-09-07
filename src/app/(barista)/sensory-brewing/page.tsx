@@ -1,7 +1,8 @@
-import CardList from "@components/CardList";
 import SubTitleBox from "@components/SubTitleBox";
 import TitleWithBar from "@components/TitleWithBar";
 import { MENU_NAME } from "@constants/constants";
+import SensoryBrewingLv1 from "@containers/sensory-brewing/SensoryBrewingLv1";
+import SensoryBrewingLv2 from "@containers/sensory-brewing/SensoryBrewingLv2";
 import { classNames } from "@utils/utils";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
@@ -16,76 +17,6 @@ const 강의개요 = [
   { title: "교육기간", content: "1~3개월" },
   { title: "시간표", content: "주2회, 주3회, 주말반 수업" },
   { title: "강의시간", content: "오전반, 오후반, 저녁반, 주말반" },
-];
-
-const 센서리브루잉LV1 = [
-  {
-    title: "센서리 기초이론|커피 향미 인지 훈련",
-    imgUrl: "/images/sensory-brewing/brewing_lv1_img_1.jpeg",
-  },
-  {
-    title: "아로마키트 카테고리|향미 평가훈련",
-    imgUrl: "/images/sensory-brewing/brewing_lv1_img_2.jpeg",
-  },
-  {
-    title: "커핑 테이블 셋팅연습|아로마 키트 카테고리",
-    imgUrl: "/images/sensory-brewing/brewing_lv1_img_3.jpeg",
-  },
-  {
-    title: "커핑 테이블 셋팅 실습|SCA커핑시트 작성연습",
-    imgUrl: "/images/sensory-brewing/brewing_lv1_img_4.jpeg",
-  },
-  {
-    title: "브루잉 기초 이론|브루잉 방식의 차이",
-    imgUrl: "/images/sensory-brewing/brewing_lv1_img_5.jpeg",
-  },
-  {
-    title: "푸어방식+린싱",
-    imgUrl: "/images/sensory-brewing/brewing_lv1_img_6.jpeg",
-  },
-  {
-    title: "추출 변수 이해|구간별 커피향미",
-    imgUrl: "/images/sensory-brewing/brewing_lv1_img_7.jpeg",
-  },
-  {
-    title: "추출 변수[입자크기]|물온도",
-    imgUrl: "/images/sensory-brewing/brewing_lv1_img_8.jpeg",
-  },
-];
-
-const 센서리브루잉LV2 = [
-  {
-    title: "미각 5원미 이해|아로마 키트 연습",
-    imgUrl: "/images/sensory-brewing/brewing_lv2_img_1.jpeg",
-  },
-  {
-    title: "맛의 강도 차이|인지 연습",
-    imgUrl: "/images/sensory-brewing/brewing_lv2_img_2.jpeg",
-  },
-  {
-    title: "특성 차이 비교 실습|트라이 앵글 커핑 실습",
-    imgUrl: "/images/sensory-brewing/brewing_lv2_img_3.jpeg",
-  },
-  {
-    title: "커핑 테이블 셋팅 실습|커핑시 발생 오류|주의사항 이해",
-    imgUrl: "/images/sensory-brewing/brewing_lv2_img_4.jpeg",
-  },
-  {
-    title: "TDS+추출 수율이해|브루잉 컨트롤 차트이|해",
-    imgUrl: "/images/sensory-brewing/brewing_lv2_img_5.jpeg",
-  },
-  {
-    title: "드리퍼+블루밍차이",
-    imgUrl: "/images/sensory-brewing/brewing_lv2_img_6.jpeg",
-  },
-  {
-    title: "추출 변수 이해|물온도,물비율 입자",
-    imgUrl: "/images/sensory-brewing/brewing_lv2_img_7.jpeg",
-  },
-  {
-    title: "추출변수 통제|TDS,추출 수율 조절",
-    imgUrl: "/images/sensory-brewing/brewing_lv2_img_8.jpeg",
-  },
 ];
 
 export default function Page() {
@@ -179,19 +110,7 @@ export default function Page() {
                 titleClassName="text-theone-color9"
               />
             </div>
-            <CardList columns={3} mdColumns={4}>
-              {센서리브루잉LV1.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color9"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex}>{text}</p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <SensoryBrewingLv1 />
           </div>
         </div>
       </section>
@@ -211,19 +130,7 @@ export default function Page() {
                 titleClassName="text-theone-color9"
               />
             </div>
-            <CardList columns={3} mdColumns={4}>
-              {센서리브루잉LV2.map((item, index) => (
-                <CardList.CardItem
-                  key={index}
-                  imgUrl={item.imgUrl}
-                  labelText={index + 1 + "회차"}
-                  labelBgClassName="bg-theone-color9"
-                  content={item.title.split("|").map((text, textIndex) => (
-                    <p key={textIndex}>{text}</p>
-                  ))}
-                />
-              ))}
-            </CardList>
+            <SensoryBrewingLv2 />
           </div>
         </div>
       </section>
