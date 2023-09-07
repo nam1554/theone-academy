@@ -1,7 +1,5 @@
-import MenuBox from "@components/MenuBox";
-import TitleBox from "@components/TitleBox";
 import TitleWithBar from "@components/TitleWithBar";
-import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@constants/constants";
+import { MENU_NAME } from "@constants/constants";
 import { Handshake } from "@public/svgs";
 import { classNames } from "@utils/utils";
 import {
@@ -17,30 +15,15 @@ const montserrat = Montserrat({
 });
 
 export default function Page() {
-  const menus = NAVIGATION.filter(
-    (category) => category.name === MENU_CATEGORY.아카데미
-  )[0].child;
   return (
     <main>
       <section>
-        <TitleBox
-          title="ACADEMY"
-          subTitle="아 카 데 미"
-          backgroundImageUrl="/images/academy/introuduce_menu_img_0.jpeg"
-        />
-      </section>
-      <section>
-        {menus ? (
-          <MenuBox>
-            {menus.map((menu, index) => (
-              <MenuBox.Button key={index} text={menu.name} href={menu.href} />
-            ))}
-          </MenuBox>
-        ) : null}
-      </section>
-      <section>
         <div className="max-w-7xl mx-auto mt-20pxr md:mt-50pxr">
           <TitleWithBar text={MENU_NAME.아카데미소개} />
+        </div>
+      </section>
+      <section>
+        <div className="max-w-7xl mx-auto">
           <div className="p-15pxr flex justify-center">
             <h2
               className={classNames(
@@ -54,7 +37,7 @@ export default function Page() {
           <div className="mb-10pxr">
             <div className="relative h-28 md:h-52 lg:h-80">
               <Image
-                src={"/images/academy/introuduce_menu_img_1.jpeg"}
+                src={"/images/academy/introuduce_menu_img_0.jpeg"}
                 fill
                 sizes="100vw"
                 style={{

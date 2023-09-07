@@ -1,7 +1,5 @@
-import MenuBox from "@components/MenuBox";
-import TitleBox from "@components/TitleBox";
 import TitleWithBar from "@components/TitleWithBar";
-import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@constants/constants";
+import { MENU_NAME } from "@constants/constants";
 import InteriorBanner from "@containers/location/InteriorBanner";
 import { classNames } from "@utils/utils";
 import { MapPinIcon } from "@heroicons/react/24/solid";
@@ -13,27 +11,8 @@ const montserrat = Montserrat({
 });
 
 export default function Page() {
-  const menus = NAVIGATION.filter(
-    (category) => category.name === MENU_CATEGORY.아카데미
-  )[0].child;
   return (
     <main>
-      <section>
-        <TitleBox
-          title="ACADEMY"
-          subTitle="아 카 데 미"
-          backgroundImageUrl="/images/academy/introuduce_menu_img_0.jpeg"
-        />
-      </section>
-      <section>
-        {menus ? (
-          <MenuBox>
-            {menus.map((menu, index) => (
-              <MenuBox.Button key={index} text={menu.name} href={menu.href} />
-            ))}
-          </MenuBox>
-        ) : null}
-      </section>
       <section>
         <div className="max-w-7xl mx-auto mt-20pxr md:mt-50pxr">
           <TitleWithBar text={MENU_NAME.위치조회시설소개} />

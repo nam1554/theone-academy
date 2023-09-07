@@ -1,9 +1,7 @@
 import CardList from "@components/CardList";
-import MenuBox from "@components/MenuBox";
 import SubTitleBox from "@components/SubTitleBox";
-import TitleBox from "@components/TitleBox";
 import TitleWithBar from "@components/TitleWithBar";
-import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@constants/constants";
+import { MENU_NAME } from "@constants/constants";
 import { classNames } from "@utils/utils";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
@@ -67,27 +65,8 @@ const 라떼아트LV2 = [
 ];
 
 export default function Page() {
-  const menus = NAVIGATION.filter(
-    (category) => category.name === MENU_CATEGORY.바리스타
-  )[0].child;
   return (
     <main>
-      <section>
-        <TitleBox
-          title="BARISTA"
-          subTitle="바 리 스 타"
-          backgroundImageUrl="/images/category/barista.jpeg"
-        />
-      </section>
-      <section>
-        {menus ? (
-          <MenuBox>
-            {menus.map((menu, index) => (
-              <MenuBox.Button key={index} text={menu.name} href={menu.href} />
-            ))}
-          </MenuBox>
-        ) : null}
-      </section>
       <section>
         <div className="max-w-7xl mx-auto mt-20pxr md:mt-50pxr">
           <TitleWithBar text={MENU_NAME.라떼아트} />

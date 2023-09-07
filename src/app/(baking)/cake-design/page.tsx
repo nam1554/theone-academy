@@ -1,12 +1,9 @@
 import CardList from "@components/CardList";
-import MenuBox from "@components/MenuBox";
 import SubTitleBox from "@components/SubTitleBox";
 import TextWithCheckIcon from "@components/TextWithCheckIcon";
-import TitleBox from "@components/TitleBox";
 import TitleWithBar from "@components/TitleWithBar";
-import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@constants/constants";
+import { MENU_NAME } from "@constants/constants";
 import { classNames } from "@utils/utils";
-import { CheckIcon } from "@heroicons/react/24/outline";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 
@@ -120,27 +117,8 @@ const 케이크실무 = [
 ];
 
 export default function Page() {
-  const menus = NAVIGATION.filter(
-    (category) => category.name === MENU_CATEGORY.베이킹
-  )[0].child;
   return (
     <main>
-      <section>
-        <TitleBox
-          title="BAKING"
-          subTitle="베 이 킹"
-          backgroundImageUrl="/images/category/baking.jpeg"
-        />
-      </section>
-      <section>
-        {menus ? (
-          <MenuBox>
-            {menus.map((menu, index) => (
-              <MenuBox.Button key={index} text={menu.name} href={menu.href} />
-            ))}
-          </MenuBox>
-        ) : null}
-      </section>
       <section>
         <div className="max-w-7xl mx-auto mt-20pxr md:mt-50pxr">
           <TitleWithBar text={MENU_NAME.케이크디자인} />
