@@ -33,7 +33,7 @@ const CardItem = ({
           <div className="bg-gray-600 h-full rounded-t" />
         )}
       </div>
-      <div className="relative pt-32pxr pl-5pxr pb-5pxr md:pl-7pxr md:pb-7pxr rounded-b shadow shadow-gray-200 bg-white grow">
+      <div className="relative pt-32pxr px-5pxr pb-5pxr md:px-7pxr md:pb-7pxr rounded-b shadow shadow-gray-200 bg-white grow">
         <div className="absolute top-0 left-0">
           <div
             className={classNames(
