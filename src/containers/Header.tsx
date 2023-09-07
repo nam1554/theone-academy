@@ -1,7 +1,7 @@
-import { classNames } from "@/utils/utils";
+import { classNames } from "@utils/utils";
 import Link from "next/link";
 import Image from "next/image";
-import { Logo } from "@/public/svgs";
+import { Logo } from "@public/svgs";
 import { Montserrat } from "next/font/google";
 import MobileMenu from "@containers/MobileMenu";
 import type { HeaderProps } from "@/types";

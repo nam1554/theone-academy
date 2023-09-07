@@ -1,9 +1,9 @@
-import MenuBox from "@/components/MenuBox";
-import TitleBox from "@/components/TitleBox";
-import TitleWithBar from "@/components/TitleWithBar";
-import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@/constants/constants";
-import { Handshake } from "@/public/svgs";
-import { classNames } from "@/utils/utils";
+import MenuBox from "@components/MenuBox";
+import TitleBox from "@components/TitleBox";
+import TitleWithBar from "@components/TitleWithBar";
+import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@constants/constants";
+import { Handshake } from "@public/svgs";
+import { classNames } from "@utils/utils";
 import {
   ClipboardDocumentCheckIcon,
   UserGroupIcon,

@@ -1,6 +1,6 @@
 "use client";
 
-import { classNames } from "@/utils/utils";
+import { classNames } from "@utils/utils";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { usePathname } from "next/navigation";

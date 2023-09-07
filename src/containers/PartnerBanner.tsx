@@ -1,6 +1,6 @@
 "use client";
 
-import { classNames } from "@/utils/utils";
+import { classNames } from "@utils/utils";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useRef } from "react";

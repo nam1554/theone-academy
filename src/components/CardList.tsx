@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { MenuBoxButtonProps } from "./MenuBoxButton";
 import CardItem from "./CardItem";
-import { classNames } from "@/utils/utils";
+import { classNames } from "@utils/utils";
 
 interface CardListProps {
   children:

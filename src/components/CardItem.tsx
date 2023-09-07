@@ -1,4 +1,4 @@
-import { classNames } from "@/utils/utils";
+import { classNames } from "@utils/utils";
 import Image from "next/image";
 import { ReactElement } from "react";
 

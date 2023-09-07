@@ -1,9 +1,9 @@
-import MenuBox from "@/components/MenuBox";
-import TextWithCheckIcon from "@/components/TextWithCheckIcon";
-import TitleBox from "@/components/TitleBox";
-import TitleWithBar from "@/components/TitleWithBar";
-import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@/constants/constants";
-import { classNames } from "@/utils/utils";
+import MenuBox from "@components/MenuBox";
+import TextWithCheckIcon from "@components/TextWithCheckIcon";
+import TitleBox from "@components/TitleBox";
+import TitleWithBar from "@components/TitleWithBar";
+import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@constants/constants";
+import { classNames } from "@utils/utils";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 

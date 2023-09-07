@@ -1,10 +1,10 @@
-import CardList from "@/components/CardList";
-import MenuBox from "@/components/MenuBox";
-import SubTitleBox from "@/components/SubTitleBox";
-import TitleBox from "@/components/TitleBox";
-import TitleWithBar from "@/components/TitleWithBar";
-import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@/constants/constants";
-import { classNames } from "@/utils/utils";
+import CardList from "@components/CardList";
+import MenuBox from "@components/MenuBox";
+import SubTitleBox from "@components/SubTitleBox";
+import TitleBox from "@components/TitleBox";
+import TitleWithBar from "@components/TitleWithBar";
+import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@constants/constants";
+import { classNames } from "@utils/utils";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 

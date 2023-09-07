@@ -1,10 +1,10 @@
-import Header from "@/containers/Header";
+import Header from "@containers/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
-import Footer from "@/containers/Footer";
+import Footer from "@containers/Footer";
 import { ThemeProvider } from "@components/material-tailwind";
-import { NAVIGATION } from "@/constants/constants";
+import { NAVIGATION } from "@constants/constants";
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],

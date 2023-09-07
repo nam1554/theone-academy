@@ -6,7 +6,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Montserrat } from "next/font/google";
-import { classNames } from "@/utils/utils";
+import { classNames } from "@utils/utils";
 import MainBanner from "@containers/MainBanner";
 import ClassBanner from "@containers/ClassBanner";
 import PartnerBanner from "@containers/PartnerBanner";

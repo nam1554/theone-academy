@@ -1,9 +1,9 @@
-import MenuBox from "@/components/MenuBox";
-import TitleBox from "@/components/TitleBox";
-import TitleWithBar from "@/components/TitleWithBar";
-import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@/constants/constants";
-import InteriorBanner from "@/containers/location/InteriorBanner";
-import { classNames } from "@/utils/utils";
+import MenuBox from "@components/MenuBox";
+import TitleBox from "@components/TitleBox";
+import TitleWithBar from "@components/TitleWithBar";
+import { MENU_CATEGORY, MENU_NAME, NAVIGATION } from "@constants/constants";
+import InteriorBanner from "@containers/location/InteriorBanner";
+import { classNames } from "@utils/utils";
 import { MapPinIcon } from "@heroicons/react/24/solid";
 import { Montserrat } from "next/font/google";
 
