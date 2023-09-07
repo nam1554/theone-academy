@@ -5,6 +5,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import Footer from "@containers/Footer";
 import { ThemeProvider } from "@components/material-tailwind";
 import { NAVIGATION } from "@constants/constants";
+import { Analytics } from "@vercel/analytics/react";
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
           {children}
           <Footer navigation={NAVIGATION} />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
