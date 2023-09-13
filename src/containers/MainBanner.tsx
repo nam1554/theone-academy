@@ -1,16 +1,23 @@
+"use client";
+
 import MainCarousel from "./MainCarousel";
 import Link from "next/link";
 import Image from "next/image";
+import main_banner_mobile_0 from "@public/images/main/main_banner_mobile_0.png";
+import main_banner_mobile_1 from "@public/images/main/main_banner_mobile_1.jpeg";
+import main_banner_0 from "@public/images/main/main_banner_0.png";
+import main_banner_1 from "@public/images/main/main_banner_1.jpeg";
+import { MouseEventHandler, useCallback, useState } from "react";
 
 const mobileImages = [
   {
     name: "main_banner_mobile_0",
-    src: "/images/main/main_banner_mobile_0.png",
+    src: main_banner_mobile_0,
     href: "/notice",
   },
   {
     name: "main_banner_mobile_1",
-    src: "/images/main/main_banner_mobile_1.jpeg",
+    src: main_banner_mobile_1,
     href: "/contact",
   },
 ];
@@ -18,53 +25,58 @@ const mobileImages = [
 const images = [
   {
     name: "main_banner_0",
-    src: "/images/main/main_banner_0.png",
+    src: main_banner_0,
     href: "/notice",
   },
   {
     name: "main_banner_1",
-    src: "/images/main/main_banner_1.jpeg",
+    src: main_banner_1,
     href: "/contact",
   },
 ];
 
 const MainBanner = () => {
+  const [dragging, setDragging] = useState(false);
+  const handleBeforeChange = useCallback(() => {
+    setDragging(true);
+  }, [setDragging]);
+
+  const handleAfterChange = useCallback(() => {
+    setDragging(false);
+  }, [setDragging]);
+
+  const onClickBanner: MouseEventHandler = (event) => {
+    if (dragging) {
+      event.preventDefault();
+    }
+  };
+
   return (
     <>
       <div className="lg:hidden">
         <MainCarousel>
           {mobileImages.map((image, imageIndex) => (
             <Link key={imageIndex} href={image.href} className="!flex">
-              <Image
-                src={image.src}
-                width={640}
-                height={512}
-                sizes="100vw"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                }}
-                alt={image.name}
-              />
+              <Image src={image.src} alt={image.name} />
             </Link>
           ))}
         </MainCarousel>
       </div>
       <div className="hidden lg:block">
-        <MainCarousel>
+        <MainCarousel
+          settings={{
+            beforeChange: handleBeforeChange,
+            afterChange: handleAfterChange,
+          }}
+        >
           {images.map((image, imageIndex) => (
-            <Link key={imageIndex} href={image.href} className="!flex">
-              <Image
-                src={image.src}
-                width={1440}
-                height={465}
-                sizes="100vw"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                }}
-                alt={image.name}
-              />
+            <Link
+              key={imageIndex}
+              href={image.href}
+              className="!flex"
+              onClick={onClickBanner}
+            >
+              <Image src={image.src} alt={image.name} priority />
             </Link>
           ))}
         </MainCarousel>

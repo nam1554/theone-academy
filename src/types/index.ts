@@ -30,6 +30,3 @@ export interface MenuProps {
 export interface MagaMenuProps {
   navigation: Navigation;
 }
-export interface MainCarouselProps {
-  children: children;
-}

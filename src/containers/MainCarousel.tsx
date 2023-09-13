@@ -1,8 +1,13 @@
 "use client";
 
 import Slider, { CustomArrowProps, Settings } from "react-slick";
-import type { MainCarouselProps } from "@/types";
+import type { children } from "@/types";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+
+export interface MainCarouselProps {
+  children: children;
+  settings?: Settings;
+}
 
 const PrevArrow = ({ className, style, onClick }: CustomArrowProps) => (
   <div className="absolute top-1/2 left-10pxr z-[1]" onClick={onClick}>
@@ -22,8 +27,8 @@ const NextArrow = ({ className, style, onClick }: CustomArrowProps) => (
   </div>
 );
 
-const MainCarousel = ({ children }: MainCarouselProps) => {
-  const settings: Settings = {
+const MainCarousel = ({ children, settings = {} }: MainCarouselProps) => {
+  const defaultSettings: Settings = {
     dots: false,
     arrows: true,
     infinite: true,
@@ -33,8 +38,9 @@ const MainCarousel = ({ children }: MainCarouselProps) => {
     slidesToScroll: 1,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
+    ...settings,
   };
-  return <Slider {...settings}>{children}</Slider>;
+  return <Slider {...defaultSettings}>{children}</Slider>;
 };
 
 export default MainCarousel;
