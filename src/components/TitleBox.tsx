@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Poppins } from "next/font/google";
 import { classNames } from "@utils/utils";
+import background_overlay_img from "@public/images/background_overlay_img.png";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -36,12 +37,7 @@ const TitleBox = ({ title, subTitle, backgroundImageUrl }: TitleBoxProps) => {
         />
         <Image
           className="absolute w-full h-full top-0 opacity-40"
-          src={"/images/background_overlay_img.png"}
-          fill
-          sizes="100vw"
-          style={{
-            objectFit: "fill",
-          }}
+          src={background_overlay_img}
           alt="overlay image"
         />
       </div>
