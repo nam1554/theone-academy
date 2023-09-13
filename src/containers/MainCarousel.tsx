@@ -10,7 +10,10 @@ export interface MainCarouselProps {
 }
 
 const PrevArrow = ({ className, style, onClick }: CustomArrowProps) => (
-  <div className="absolute top-1/2 left-10pxr z-[1]" onClick={onClick}>
+  <div
+    className="absolute top-1/2 left-10pxr z-[1] cursor-pointer"
+    onClick={onClick}
+  >
     <ChevronLeftIcon
       className="absolute -top-12pxr w-25pxr h-25pxr stroke-white stroke-[3]
     lg:w-30pxr lg:h-30pxr"
@@ -19,7 +22,10 @@ const PrevArrow = ({ className, style, onClick }: CustomArrowProps) => (
 );
 
 const NextArrow = ({ className, style, onClick }: CustomArrowProps) => (
-  <div className="absolute top-1/2 right-35pxr" onClick={onClick}>
+  <div
+    className="absolute top-1/2 right-35pxr cursor-pointer"
+    onClick={onClick}
+  >
     <ChevronRightIcon
       className="absolute -top-12pxr w-25pxr h-25pxr stroke-white stroke-[3]
     lg:w-30pxr lg:h-30pxr"

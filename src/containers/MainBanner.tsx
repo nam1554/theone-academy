@@ -57,7 +57,17 @@ const MainBanner = () => {
         <MainCarousel>
           {mobileImages.map((image, imageIndex) => (
             <Link key={imageIndex} href={image.href} className="!flex">
-              <Image src={image.src} alt={image.name} />
+              <Image
+                src={image.src}
+                width={640}
+                height={512}
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                alt={image.name}
+              />
             </Link>
           ))}
         </MainCarousel>
@@ -76,7 +86,18 @@ const MainBanner = () => {
               className="!flex"
               onClick={onClickBanner}
             >
-              <Image src={image.src} alt={image.name} priority />
+              <Image
+                src={image.src}
+                width={1440}
+                height={465}
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                alt={image.name}
+                priority
+              />
             </Link>
           ))}
         </MainCarousel>
