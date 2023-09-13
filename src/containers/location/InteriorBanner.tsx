@@ -35,6 +35,7 @@ const InteriorBanner = () => {
               objectFit: "cover",
             }}
             alt={image.name}
+            priority={imageIndex === 0}
           />
         ))}
       </InteriorCarousel>
