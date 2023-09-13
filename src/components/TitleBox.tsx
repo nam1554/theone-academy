@@ -29,7 +29,6 @@ const TitleBox = ({ title, subTitle, backgroundImageUrl }: TitleBoxProps) => {
         <Image
           src={backgroundImageUrl}
           fill
-          sizes="100vw"
           style={{
             objectFit: "cover",
           }}
