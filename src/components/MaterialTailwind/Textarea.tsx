@@ -33,7 +33,7 @@ export default function Textarea({
       labelProps={{
         className: "peer-placeholder-shown:text-gray-700",
       }}
-      className="placeholder-shown:border-b-gray-700 border-b-gray-500 appearance-none"
+      className="placeholder-shown:rounded-none placeholder-shown:border-0 placeholder-shown:border-b placeholder-shown:border-b-gray-700 border-b-gray-500 appearance-none"
     />
   );
 }

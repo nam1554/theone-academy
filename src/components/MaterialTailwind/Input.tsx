@@ -35,7 +35,7 @@ export default function Input({
             className: "peer-placeholder-shown:text-gray-700",
           }}
           className={classNames(
-            "placeholder-shown:border-b-gray-700 border-b-gray-500 appearance-none",
+            "placeholder-shown:rounded-none placeholder-shown:border-0 placeholder-shown:border-b placeholder-shown:border-b-gray-700 border-b-gray-500 appearance-none",
             className
           )}
           crossOrigin=""
