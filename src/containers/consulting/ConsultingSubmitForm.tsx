@@ -24,7 +24,7 @@ interface ConsultingForm {
 const ConsultingSubmitForm = () => {
   const { register, handleSubmit, reset } = useForm<ConsultingForm>();
   return (
-    <form className="flex flex-col space-y-30pxr">
+    <form className="flex flex-col space-y-40pxr">
       <Input
         register={register("name", {
           required: true,
@@ -113,7 +113,10 @@ const ConsultingSubmitForm = () => {
         resize
       />
       <div className="flex flex-col">
-        <label htmlFor="privacyPolicyAgree" className="text-sm text-gray-700">
+        <label
+          htmlFor="privacyPolicyAgree"
+          className="text-16pxr text-gray-700"
+        >
           개인정보처리방침
         </label>
         <div className="flex mt-10pxr">
@@ -124,8 +127,8 @@ const ConsultingSubmitForm = () => {
             name="privacyPolicyAgree"
             label={
               <div className="flex">
-                <div className="text-sm">약관을 읽고 동의합니다. </div>
-                <div className="text-sm font-medium ml-1 text-black">
+                <div className="text-16pxr">약관을 읽고 동의합니다. </div>
+                <div className="text-16pxr font-medium ml-1 text-black">
                   [약관 자세히 보기]
                 </div>
               </div>
@@ -135,7 +138,7 @@ const ConsultingSubmitForm = () => {
       </div>
       <div className="flex justify-center items-center">
         <Button>
-          <div className="text-14pxr md:text-16pxr">접수하기</div>
+          <div className="text-16pxr">접수하기</div>
         </Button>
       </div>
     </form>

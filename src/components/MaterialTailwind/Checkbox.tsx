@@ -29,7 +29,7 @@ export default function Checkbox({
       defaultChecked={defaultChecked}
       ripple={false}
       labelProps={{
-        className: "text-sm !-mt-2pxr pl-8pxr",
+        className: "!text-16pxr !-mt-2pxr pl-8pxr",
       }}
       containerProps={{
         className: "p-0",

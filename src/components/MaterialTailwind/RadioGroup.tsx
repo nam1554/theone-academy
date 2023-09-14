@@ -41,7 +41,7 @@ export default function RadioGroup({
 }: RadioGroupProps) {
   return (
     <div className={classNames("flex flex-col", className)}>
-      <label htmlFor={name} className="text-sm text-gray-700">
+      <label htmlFor={name} className="text-16pxr text-gray-700">
         {label}
       </label>
       {labels.length > 0 &&
@@ -58,7 +58,7 @@ export default function RadioGroup({
               ripple={false}
               icon={<Icon />}
               labelProps={{
-                className: "text-sm -mt-2pxr pl-8pxr",
+                className: "!text-16pxr -mt-2pxr pl-8pxr",
               }}
               containerProps={{
                 className: "p-0",
