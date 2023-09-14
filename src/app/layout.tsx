@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import Footer from "@containers/Footer";
-import { ThemeProvider } from "@components/material-tailwind";
+import { ThemeProvider } from "@components/MaterialTailwind";
 import { NAVIGATION } from "@constants/constants";
 import { Analytics } from "@vercel/analytics/react";
 
