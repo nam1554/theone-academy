@@ -32,10 +32,11 @@ export default function Input({
           label={label}
           placeholder={placeholder}
           labelProps={{
-            className: "peer-placeholder-shown:text-gray-700",
+            className: "peer-placeholder-shown:text-gray-600",
           }}
           className={classNames(
-            "placeholder-shown:rounded-none placeholder-shown:border-0 placeholder-shown:border-b placeholder-shown:border-b-gray-700 border-b-gray-500 appearance-none",
+            "placeholder-shown:rounded-none placeholder-shown:border-0 placeholder-shown:border-b placeholder-shown:border-b-gray-600",
+            "border-b-gray-500 appearance-none !text-16pxr",
             className
           )}
           crossOrigin=""
