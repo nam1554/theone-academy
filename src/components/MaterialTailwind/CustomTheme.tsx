@@ -24,23 +24,6 @@ const CustomTheme: CustomThemeType = {
               },
             },
           },
-          states: {
-            close: {
-              label: {
-                fontSize: "text-16pxr",
-              },
-            },
-            open: {
-              label: {
-                fontSize: "text-16pxr",
-              },
-            },
-            withValue: {
-              label: {
-                fontSize: "text-16pxr",
-              },
-            },
-          },
         },
       },
     },

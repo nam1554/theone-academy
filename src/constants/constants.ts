@@ -74,7 +74,7 @@ export const NAVIGATION: Navigation = [
     href: "/community",
     child: [
       { name: MENU_NAME.공지사항, href: "/notice" },
-      { name: MENU_NAME.더원에바란다, href: "/suggestions" },
+      { name: MENU_NAME.더원에바란다, href: "/propose" },
     ],
   },
   {

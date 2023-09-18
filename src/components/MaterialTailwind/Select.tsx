@@ -47,6 +47,9 @@ export default function Select({
       {...field}
       variant="static"
       label={label}
+      labelProps={{
+        className: "!text-16pxr",
+      }}
       className={classNames("!text-16pxr", className)}
     >
       {labels.length > 0 && values.length > 0 && labels.length === values.length
