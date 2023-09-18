@@ -9,6 +9,7 @@ import {
   Button,
   Select,
   Option,
+  IconButton,
 } from "@material-tailwind/react";
 
 export {
@@ -20,4 +21,5 @@ export {
   Button,
   Select,
   Option,
+  IconButton,
 };

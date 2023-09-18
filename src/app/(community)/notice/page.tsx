@@ -12,14 +12,15 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className="p-15pxr mb-30pxr">
-          <BoardSearchForm />
-          <div className="mt-10pxr">
-            <BoardList />
+        <div className="max-w-4xl mx-auto mt-30pxr mb-30pxr md:mb-100pxr lg:max-w-6xl">
+          <div className="p-15pxr">
+            <BoardSearchForm />
+            <div className="mt-10pxr">
+              <BoardList />
+            </div>
           </div>
         </div>
       </section>
-      <section></section>
     </main>
   );
 }
