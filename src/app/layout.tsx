@@ -6,6 +6,7 @@ import Footer from "@containers/Footer";
 import { ThemeProvider } from "@components/MaterialTailwind";
 import { NAVIGATION } from "@constants/constants";
 import { Analytics } from "@vercel/analytics/react";
+import CustomTheme from "@components/MaterialTailwind/CustomTheme";
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={notoSansKr.className}>
-        <ThemeProvider>
+        <ThemeProvider value={CustomTheme}>
           <Header navigation={NAVIGATION} />
           {children}
           <Footer navigation={NAVIGATION} />
