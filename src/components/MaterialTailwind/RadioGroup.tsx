@@ -7,7 +7,6 @@ interface RadioGroupProps {
   label: string;
   register: UseFormRegisterReturn;
   required?: boolean;
-  placeholder?: string;
   labels?: string[];
   values?: string[];
   className?: string;
