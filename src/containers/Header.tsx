@@ -4,13 +4,17 @@ import Image from "next/image";
 import { Logo } from "@public/svgs";
 import { Montserrat } from "next/font/google";
 import MobileMenu from "@containers/MobileMenu";
-import type { HeaderProps } from "@/types";
+import type { Navigation } from "@/types";
 import Menu from "@containers/Menu";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
 });
+
+export interface HeaderProps {
+  navigation: Navigation;
+}
 
 const Header = ({ navigation }: HeaderProps) => {
   return (

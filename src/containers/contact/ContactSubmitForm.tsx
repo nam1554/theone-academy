@@ -17,7 +17,6 @@ interface ContactForm {
   email: string;
   baristaCategory: BaristaCategory;
   bakingCategory: BakingCategory;
-  title: string;
   detail: string;
   privacyPolicyAgree: boolean;
 }

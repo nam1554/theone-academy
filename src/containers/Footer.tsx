@@ -1,8 +1,12 @@
-import type { FooterProps } from "@/types";
+import type { Navigation } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
 import { PhoneIcon } from "@heroicons/react/20/solid";
 import { ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline";
+
+export interface FooterProps {
+  navigation: Navigation;
+}
 
 const Footer = ({ navigation }: FooterProps) => {
   return (

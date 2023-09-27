@@ -11,14 +11,6 @@ export interface Menu {
 
 export type Navigation = Menu[];
 
-export interface HeaderProps {
-  navigation: Navigation;
-}
-
-export interface FooterProps {
-  navigation: Navigation;
-}
-
 export interface MobileMenuProps {
   navigation: Navigation;
 }
