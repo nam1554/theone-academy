@@ -9,6 +9,7 @@ interface CheckboxProps {
   required?: boolean;
   placeholder?: string;
   defaultChecked?: boolean;
+  value?: string;
 }
 
 export default function Checkbox({
@@ -18,6 +19,7 @@ export default function Checkbox({
   required = false,
   placeholder = "",
   defaultChecked = false,
+  value = undefined,
 }: CheckboxProps) {
   return (
     <CheckboxMT
@@ -35,6 +37,7 @@ export default function Checkbox({
         className: "p-0",
       }}
       className="p-0 transition-all hover:before:opacity-0 w-4 h-4 before:w-4 before:h-4"
+      value={value}
       crossOrigin=""
     />
   );

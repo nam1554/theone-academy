@@ -35,8 +35,9 @@ export default function CheckboxGroup({
               key={index}
               register={register}
               required={required}
-              name={name}
+              name={item}
               label={item}
+              value={values[index]}
             />
           ))}
         </div>
