@@ -8,60 +8,16 @@ import { useForm } from "react-hook-form";
 import CheckboxGroup from "@components/MaterialTailwind/CheckboxGroup";
 import useMutation from "@libs/client/useMutation";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-
-const BaristaCategory = {
-  바리스타자격증: "1",
-  센서리브루잉: "2",
-  로스팅: "3",
-  SCA디플로마: "4",
-  카페음료제조반: "5",
-} as const;
-const BaristaCategoryEnum = z.nativeEnum(BaristaCategory);
-type BaristaCategoryEnum = z.infer<typeof BaristaCategoryEnum>;
-
-const BakingCategory = {
-  자격증클래스: "1",
-  카페디저트: "2",
-  케이크디자인: "3",
-  실전케이크: "4",
-  블랑제리: "5",
-  홈베이킹클래스: "6",
-} as const;
-const BakingCategoryEnum = z.nativeEnum(BakingCategory);
-type BakingCategoryEnum = z.infer<typeof BakingCategoryEnum>;
-
-const ContactFormSchema = z.object({
-  name: z
-    .string()
-    .min(1, "성명을 입력해주세요.")
-    .max(50, "최대 50자까지 입력 가능합니다."),
-  phone: z
-    .string()
-    .min(1, "휴대폰을 입력해주세요.")
-    .regex(
-      /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/,
-      "휴대폰 형식을 입력해주세요."
-    ),
-  email: z
-    .string()
-    .min(1, "이메일을 입력해주세요.")
-    .email("이메일 형식을 입력해주세요."),
-  baristaCategory: z
-    .array(BaristaCategoryEnum)
-    .nonempty("바리스타학과 항목을 체크해주세요."),
-  bakingCategory: z
-    .array(BakingCategoryEnum)
-    .nonempty("베이킹학과 항목을 체크해주세요."),
-  detail: z.string().min(1, "상담내용을 입력해주세요."),
-  privacyPolicyAgree: z.boolean(),
-});
-type ContactFormSchemaType = z.infer<typeof ContactFormSchema>;
+import {
+  ContactFormSchemaType,
+  contactFormSchema,
+} from "@libs/validations/contactForm";
 
 interface MutationResult {
   ok: boolean;
+  error: any;
 }
 
 const ErrorMessage = ({ message }: { message: string }) => (
@@ -78,7 +34,7 @@ const ContactSubmitForm = () => {
     reset,
     formState: { errors },
   } = useForm<ContactFormSchemaType>({
-    resolver: zodResolver(ContactFormSchema),
+    resolver: zodResolver(contactFormSchema),
     mode: "onChange",
     defaultValues: { baristaCategory: [], bakingCategory: [] },
   });
@@ -91,6 +47,9 @@ const ContactSubmitForm = () => {
     contact(validForm);
   };
   useEffect(() => {
+    if (data?.ok === false && data?.error) {
+      alert("상담문의 등록 실패하였습니다. 잠시 후 다시 시도바랍니다.");
+    }
     if (data?.ok) {
       alert("상담문의를 등록하였습니다.");
       reset();

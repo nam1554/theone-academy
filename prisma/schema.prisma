@@ -10,3 +10,19 @@ datasource db {
   url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
+
+model Contact {
+  id                 Int         @id @default(autoincrement())
+  name               String
+  phone              String
+  email              String
+  baristaCategory    String
+  bakingCategory     String
+  detail             String      @db.MediumText
+  privacyPolicyAgree BooleanEnum
+}
+
+enum BooleanEnum {
+  TRUE
+  FALSE
+}
