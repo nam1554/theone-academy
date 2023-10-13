@@ -9,7 +9,6 @@ interface ButtonProps {
 }
 
 export default function Button({
-  onClick,
   children,
   className = "",
   ...rest
