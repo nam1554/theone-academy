@@ -6,6 +6,7 @@ import Button from "@components/MaterialTailwind/Button";
 import RadioGroup from "@components/MaterialTailwind/RadioGroup";
 import Textarea from "@components/MaterialTailwind/Textarea";
 import { useForm } from "react-hook-form";
+import Link from "next/link";
 
 interface ConsultingForm {
   name: string;
@@ -129,7 +130,7 @@ const ConsultingSubmitForm = () => {
               <div className="flex">
                 <div className="text-16pxr">약관을 읽고 동의합니다. </div>
                 <div className="text-16pxr font-medium ml-1 text-black">
-                  [약관 자세히 보기]
+                  <Link href={"/privacy"}>[약관 자세히 보기]</Link>
                 </div>
               </div>
             }
