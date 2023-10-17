@@ -24,6 +24,17 @@ model Contact {
   updatedAt          DateTime    @updatedAt
 }
 
+model Partnership {
+  id                 Int         @id @default(autoincrement())
+  companyName        String
+  category           String
+  phone              String
+  detail             String      @db.MediumText
+  privacyPolicyAgree BooleanEnum
+  createdAt          DateTime    @default(now())
+  updatedAt          DateTime    @updatedAt
+}
+
 enum BooleanEnum {
   TRUE
   FALSE

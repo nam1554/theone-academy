@@ -55,7 +55,7 @@ const ContactSubmitForm = () => {
       alert("상담문의를 등록하였습니다.");
       reset();
     }
-  }, [data, router, reset]);
+  }, [data, reset]);
   return (
     <form
       onSubmit={handleSubmit(onValid)}
