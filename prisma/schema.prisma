@@ -35,6 +35,20 @@ model Partnership {
   updatedAt          DateTime    @updatedAt
 }
 
+model Propose {
+  id                 Int         @id @default(autoincrement())
+  name               String
+  phone              String
+  email              String
+  category           String
+  file               String
+  title              String
+  detail             String      @db.MediumText
+  privacyPolicyAgree BooleanEnum
+  createdAt          DateTime    @default(now())
+  updatedAt          DateTime    @updatedAt
+}
+
 enum BooleanEnum {
   TRUE
   FALSE

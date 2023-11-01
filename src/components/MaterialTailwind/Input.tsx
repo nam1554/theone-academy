@@ -47,7 +47,7 @@ export default function Input({
           id={name}
           required={required}
           type="file"
-          accept="audio/*, video/*, image/*"
+          accept="audio/*, video/*, image/*, application/pdf"
           {...register}
           variant="static"
           label={label}

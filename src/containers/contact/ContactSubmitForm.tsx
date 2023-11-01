@@ -26,7 +26,6 @@ const ErrorMessage = ({ message }: { message: string }) => (
 );
 
 const ContactSubmitForm = () => {
-  const router = useRouter();
   const [contact, { loading, data, error }] =
     useMutation<MutationResult>("/api/contact");
   const {

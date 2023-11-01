@@ -27,7 +27,6 @@ const ErrorMessage = ({ message }: { message: string }) => (
 );
 
 const PartnershipSubmitForm = () => {
-  const router = useRouter();
   const [partnership, { loading, data, error }] =
     useMutation<MutationResult>("/api/partnership");
   const {
@@ -42,7 +41,6 @@ const PartnershipSubmitForm = () => {
     defaultValues: { category: "1" },
   });
   const onValid = (validForm: PartnershipFormSchemaType) => {
-    console.log("validForm : ", validForm);
     if (loading) return;
     if (validForm.privacyPolicyAgree === false) {
       alert("개인정보처리방침 약관에 동의해주세요.");
