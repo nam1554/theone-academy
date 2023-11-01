@@ -11,7 +11,7 @@ import useMutation from "@libs/client/useMutation";
 import { ProposeFormSchemaType } from "@libs/validations/proposeForm";
 import { proposeFormSchema } from "@libs/validations/proposeForm";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface MutationResult {
   ok: boolean;
@@ -23,6 +23,7 @@ const ErrorMessage = ({ message }: { message: string }) => (
 );
 
 const ProposeSubmitForm = () => {
+  const [isFileLoading, setIsFileLoading] = useState(false);
   const [propose, { loading, data, error }] =
     useMutation<MutationResult>("/api/propose");
   const {
@@ -36,14 +37,26 @@ const ProposeSubmitForm = () => {
     mode: "onChange",
     defaultValues: { category: "1" },
   });
-  const onValid = (validForm: ProposeFormSchemaType) => {
-    console.log("validForm : ", validForm);
-    if (loading) return;
+  const onValid = async (validForm: ProposeFormSchemaType) => {
+    if (loading || isFileLoading) return;
     if (validForm.privacyPolicyAgree === false) {
       alert("개인정보처리방침 약관에 동의해주세요.");
       return;
     }
-    propose(validForm);
+
+    if (validForm.file.length > 0) {
+      setIsFileLoading(true);
+      const { uploadURL } = await (await fetch(`/api/files`)).json();
+      const form = new FormData();
+      form.append("file", validForm.file[0], validForm.file[0].name);
+      const {
+        result: { id },
+      } = await (await fetch(uploadURL, { method: "POST", body: form })).json();
+      propose({ ...validForm, file: id });
+      setIsFileLoading(false);
+    } else {
+      propose({ ...validForm, file: "" });
+    }
   };
   useEffect(() => {
     if (data?.ok === false && data?.error) {
@@ -142,7 +155,7 @@ const ProposeSubmitForm = () => {
       <div className="flex justify-center items-center">
         <Button type="submit">
           <div className="text-16pxr">
-            {loading ? "Loading..." : "작성완료"}
+            {loading || isFileLoading ? "Loading..." : "작성완료"}
           </div>
         </Button>
       </div>

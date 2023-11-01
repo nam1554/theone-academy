@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
         phone,
         email,
         category,
-        file: "",
+        file,
         title,
         detail,
         privacyPolicyAgree: privacyPolicyAgree

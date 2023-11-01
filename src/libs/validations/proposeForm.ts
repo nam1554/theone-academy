@@ -36,13 +36,18 @@ export const proposeFormSchema = z.object({
   category: categoryEnum,
   file: z
     .any()
-    .optional()
     .refine(
-      (file) => !!file || file?.size <= MAX_FILE_SIZE,
+      (file) =>
+        typeof file === "string" ||
+        file.length === 0 ||
+        file[0].size <= MAX_FILE_SIZE,
       `최대 파일 사이즈는 5MB 입니다.`
     )
     .refine(
-      (file) => !!file || ACCEPTED_FILE_TYPES.includes(file?.type),
+      (file) =>
+        typeof file === "string" ||
+        file.length === 0 ||
+        ACCEPTED_FILE_TYPES.includes(file[0].type),
       ".jpg, .jpeg, .png, .webp, .pdf 확장자만 첨부가능합니다."
     ),
   title: z.string().min(1, "제목을 입력해주세요."),
